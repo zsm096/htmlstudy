@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jq封装.js"></script>
+</head>
+<body>
+ 
+<select id='provincial'>
+<option>-请选择-</option>
+</select>
+<!-- 市 -->
+<select id='municipal'>
+<option>-请选择-</option>
+</select>
+<!-- 县 -->
+<select id='county'>
+<option>-请选择-</option>
+</select>
+<script>
+    var data={
+        '山西省':[
+            {'太原市':['小店区','杏花岭区','迎泽区']},
+            {'运城市':['盐湖区','永济市']}
+        ],
+        '北京市':[
+            {'北京市':['朝阳区','杏花岭区']},
+        ]
+    }
+    $.each(data,function(key){
+        var opt =$("<option>")
+        opt.html(key)
+        $('#provincial').append(opt) 
+    })
+    $('#provincial').change(function(){
+        $('#municipal').html("<option>-请选择-</option>")
+        $('#county').html("<option>-请选择-</option>")
+        var p=this.value//当前省份
+        var arr=data[p]
+        $.each(arr,function(i,val){
+            // console.log(val)
+            $.each(val,function(a){
+                var opt =$("<option>")
+                opt.html(a)
+                $('#municipal').append(opt) 
+            })
+        })
+        $('#municipal').change(function(){
+            $('#county').html("<option>-请选择-</option>")
+            var ad=this.value      //当前市
+            $.each(arr,function(i,val){
+                $.each(val,function(x){
+                    if(x==ad){
+                        var address=val[ad]   //arr[j]是对象（市级），加[ad]是市的属性，得到数组                         
+                        $.each(address,function(j,addr){
+                            var opt =$("<option>")
+                            opt.html(addr) 
+                            $('#county').append(opt) 
+                        })
+                    }
+                })
+            })
+        })
+    })
+</script>
+</body>
+</html>

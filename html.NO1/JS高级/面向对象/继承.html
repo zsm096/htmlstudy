@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //属性继承
+        function Person(name,age,sex){
+            this.name=name;
+            this.age=age;
+            this.sex=sex
+        }
+        function Students(name,age,sex,job){
+            Person.call(this,name,age,sex)
+            this.job=job;
+
+        }
+        Person.prototype.sayName=function(){
+            console.log('my name is' + this.name)
+        }
+       
+        Students.prototype.saySex=function(){
+            console.log('my sex is'+this.sex)
+        }
+        Students.prototype.sayJob=function(){
+            console.log('my job is'+this.job)
+        }
+        // var xiaoming=new Person('zhusimin',21,'女')
+        // var xiaoming=new Students('zhusimin',21,'女','web')
+        // xiaoming.sayJob()
+        //方法继承 
+        Students.prototype=Person.prototype;
+        Students.prototype.sayJob=function(){
+            console.log(this.job)
+        }
+        // var xiaoming=new Students('zhusimin',21,'女','web')
+        // xiaoming.sayJob()
+
+        extend(Students,Person)
+
+        function extend(Child,Parent){
+          for(var key in Parent.prototype){
+              Child.prototype[key]=Parent.prototype[key]
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // // //对象冒充
+        // function ClassA(sColor) {
+        //     this.color = sColor;
+        //     this.sayColor = function () {
+        //         alert(this.color);
+        //     };
+        // }
+
+        // function ClassB(sColor) {
+        //     this.newMethod = ClassA;
+        //     this.newMethod(sColor);
+        //     delete this.newMethod;
+        // }
+        // function ClassB(sColor, sName) {
+        //     this.newMethod = ClassA;
+        //     this.newMethod(sColor);
+        //     delete this.newMethod;
+
+        //     this.name = sName;
+        //     this.sayName = function () {
+        //         alert(this.name);
+        //     };
+        // }
+        // var objA = new ClassA("blue");
+        // var objB = new ClassB("red", "John");
+        // objA.sayColor();	//输出 "blue"
+        // objB.sayColor();	//输出 "red"
+        // objB.sayName();		//输出 "John"
+
+
+        // function ClassZ() {
+        //     this.newMethod = ClassX;
+        //     this.newMethod();
+        //     delete this.newMethod;
+
+        //     this.newMethod = ClassY;
+        //     this.newMethod();
+        //     delete this.newMethod;
+        // }
+        // function sayColor(sPrefix,sSuffix) {
+        //     console.log(sPrefix + this.color + sSuffix);
+        // };
+
+        // var obj = new Object();
+        // obj.color = "blue";
+
+        // sayColor.call(obj, "The color is ", "a very nice color indeed.");
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="300" style="border: 1px solid #111111"></canvas>
+    <canvas id="offcanvas" width="200" height="100" style="border: 1px solid #111111"></canvas>
+    <!-- <img src="01.jpg" alt=""> -->
+    <script>
+      var canvas=document.getElementById('canvas')
+      var offcanvas=document.getElementById('offcanvas')
+      var ctx=canvas.getContext('2d');
+      var offctx=offcanvas.getContext('2d');
+      
+
+      offctx.font="20px Georgia";
+        // ctx.strokeText("Hello World!",10,50);
+
+        offctx.font="30px Verdana";
+        // Create gradient
+        var gradient=offctx.createLinearGradient(0,0,offcanvas.width,0);
+        gradient.addColorStop("0","magenta");
+        gradient.addColorStop("0.5","blue");
+        gradient.addColorStop("1.0","red");
+        // Fill with gradient
+        offctx.strokeStyle=gradient;
+        offctx.strokeText("思软科技",10,90);
+
+
+
+
+        var img=new Image();
+        img.src='01.jpg'
+        img.onload=function(){
+            // var _imgW=this.width;
+            // var _imgH=this.height;
+            // var _l=_imgW - offcanvas.width - 10;
+            // var _t=_imgH - offcanvas.height - 20;
+            canvas.width=500;
+            canvas.height=300;
+
+           ctx.drawImage(this,0,0,500,300);
+           ctx.drawImage(offcanvas,350,190);
+
+        }
+
+
+
+
+
+
+      
+        
+    
+    </script>
+</body>
+</html>

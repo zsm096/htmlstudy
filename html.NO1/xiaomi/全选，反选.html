@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        margin: 100px  0;
+        text-align: center;
+    }
+    label{
+         padding: 0 20px;
+    }
+    </style>
+</head>
+<body>
+  <div>
+    <label><input  class="allCheck" type="checkbox">全选</label>
+    <label><input class="invert" type="checkbox">反选</label>
+  </div>
+  <div class="ipts">
+    <label ><input type="checkbox">吃饭</label>
+    <label ><input type="checkbox">睡觉</label>
+    <label ><input type="checkbox">打游戏</label>
+    <label ><input type="checkbox">看电视</label>
+    <label ><input type="checkbox">打扫卫生</label>
+<script>
+  var allCheck=document.getElementsByClassName('allCheck')[0];
+  var invert=document.getElementsByClassName('invert')[0];
+  var ipts=document.getElementsByClassName('ipts')[0].getElementsByTagName('input');
+  console.log(ipts)
+     allCheck.onclick=function(){
+       if(allCheck.checked==true){
+          for(var i=0;i<ipts.length;i++){
+             ipts[i].checked=true;
+          }
+       }else{
+        for(var i=0;i<ipts.length;i++){
+             ipts[i].checked=false;
+          }
+       }
+          
+    }
+    invert.onclick=function(){
+        // alert()
+       
+            for(var i=0;i<ipts.length;i++){
+             ipts[i].checked=!ipts[i].checked;
+         
+        }
+    }
+</script>
+  </div>
+</body>
+</html>

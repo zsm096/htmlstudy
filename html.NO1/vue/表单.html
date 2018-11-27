@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jq封装.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+     .content1,.content2{
+         width: 1000px;
+         margin: 20px auto;
+     }
+     .content1 button{
+         margin: 0 50px;
+     }
+     .content2 button{
+        font-size: 20px;
+     }
+     .totalprice{
+         font-size: 20px;
+         margin-right: 200px;
+         float: right;
+         letter-spacing: 2px;
+
+     }
+     .form-group .control-label{
+         text-align: left;
+     }
+    </style>
+</head>
+<body >
+<div class="app">
+    <div class="content1">
+            <table class="table table-bordered table-hover">
+                <tr class="row active"  v-for="(item,index) in list">
+                    <td class="col-lg-2" v-if="index==0">序号</td>
+                    <td class="col-lg-2" v-if="index>=1">{{index}}</td>
+                    <td class="col-lg-4" >{{item.title}}</td>
+                    <td class="col-lg-2" >{{item.athor}}</td>
+                    <td class="col-lg-2">{{item.price}}</td>
+                    <td class="col-lg-2"><button class="btn btn-danger">删除</button></td>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="totalprice">总价：<span>{{sum}}</span></div>
+        <div class="content2">
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="col-lg-2 control-label">书名</label>
+                    <input class="col-lg-10 form-control" type="text" v-model="title">
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 control-label">作者</label>
+                    <input class="col-lg-10 form-control" type="text" v-model="athor">
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-2 control-label">价格</label>
+                    <input class="col-lg-10 form-control" type="text"  v-model="price">
+                </div>
+                
+                
+            </form>
+            <div class="form-group row">
+                    
+                    <button type="submit" class="btn btn-primary col-lg-12" @click="add()">添加</button>
+            
+                </div>
+        </div>
+</div>    
+
+    
+    <script>
+     var app=new Vue({
+         el:".app",
+         data:{
+             list:[
+                 {
+                     title:'书名',
+                     athor:"作者",
+                     price:"价格"
+                 },
+                 {
+                     title:'平凡的世界',
+                     athor:"路遥",
+                     price:"30"
+                 },
+                 {
+                     title:'红楼梦',
+                     athor:"曹雪芹",
+                     price:"33"
+                 },
+                 {
+                     title:'西游记',
+                     athor:"吴承恩",
+                     price:"23"
+                 },
+                 {
+                     title:'水浒传',
+                     athor:"施耐庵",
+                     price:"15"
+                 },
+                 {
+                     title:'假如给我三天光明',
+                     athor:"海伦凯勒",
+                     price:"44"
+                 },
+             ],
+              title:"",
+              athor:"",
+              price:"",
+              sum:148
+         },
+         methods:{
+                add(){
+                    title=this.title
+                    athor=this.athor
+                    price=this.price
+                    this.list.push({title,athor,price})
+                    this.title=""
+                    // this.sum=0;
+
+                }
+         }
+     })
+    
+    
+    </script>
+</body>
+</html>

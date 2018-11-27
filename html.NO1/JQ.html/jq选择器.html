@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    div{
+        width: 100px;
+        height: 100px;
+        background: #ff9900;
+        display: none
+    }
+    </style>
+</head>
+<body>
+      <button>显示</button>
+      <button>隐藏</button>
+      <button>按钮</button>
+      <div></div>
+      <img src="file:///C:/Users/Administrator/Desktop/mt%E5%9B%BE%E7%89%87/%E5%A4%AA%E5%8E%9F%E7%BE%8E%E5%9B%A2%E7%BD%91-%E5%A4%AA%E5%8E%9F%E7%BE%8E%E9%A3%9F_%E9%85%92%E5%BA%97_%E6%97%85%E6%B8%B8_%E5%9B%A2%E8%B4%AD_%E7%94%B5%E5%BD%B1_%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90_files/__36490286__7877420.jpg@368w_208h_1e_1c" alt="">
+
+
+
+
+
+
+
+    <script src="C:/Users/Administrator/Desktop/html.NO1/JQ.html/jq封装.js"></script>
+
+    <script>
+    $('button:contains(显示)').click(function(){
+        // $('div').show()
+        // $('div').slideDown(3000)
+        $('div').fadeIn(3000)
+    })
+
+
+     $('button:contains(隐藏)').click(function(){
+        $('div').slideUp(3000)
+        // $('div').hide()
+        
+    })
+
+    $('button:contains(按钮)').click(function(){
+        // $('div').toggle()
+        $('div').slideToggle(3000)
+    })
+    </script>
+
+</body>
+</html>

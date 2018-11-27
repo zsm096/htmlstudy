@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="p"></p>
+    <button id="btn">10</button> -->
+    <script>
+    //   var now=new Date()
+    //    console.log(now);
+    //    console.log(now.getDate());
+    //    console.log(now.getDay());
+    //    console.log(now.getMonth());
+    //    console.log(now.getFullYear());
+    //    console.log(now.getHours());
+    //    console.log(now.getMinutes());
+    //    console.log(now.getTime());
+    //    console.log(now.getSeconds());
+    //    倒计时
+//    var p=document.getElementById('p')
+//    var btn=document.getElementById('btn')
+//    setInterval(function(){
+//        if(parseInt(btn.innerHTML)<1){
+//         btn.innerHTML='开始'
+//        }else{
+//            btn.innerHTML=parseInt(btn.innerHTML)-1
+//        }
+//    },1000)
+    // 两分钟倒计时
+    var seconds=3600;
+    function counTime(seconds){
+        var minutes=Math.floor(seconds/60)
+        seconds%=60;
+        seconds=Math.floor(seconds)
+
+        if(seconds<10){
+            seconds='0'+seconds
+            
+        }
+        if(minutes<10){
+            seconds='0'+seconds
+            
+        }
+    }
+
+
+
+
+
+       
+       
+       
+      
+    </script>
+</body>
+</html>

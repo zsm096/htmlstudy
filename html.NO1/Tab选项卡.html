@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shili</title>
+    <style>
+     button{
+         width: 120px;
+         height: 60px;
+         border: 1px solid orange;
+         background: none;
+         border-radius:5px;  
+         color: #ff9900
+     } 
+     button:hover{
+         background: #ff9900;
+         color: white;
+     }
+
+     div{
+         display: none;
+     }
+    button:hover+div{
+         display: inline;
+    }
+     div{
+        position: absolute;
+        top:80px;
+        left: 10px;
+     }
+    </style>
+</head>
+<body>
+   <button class="num1">娱乐</button>
+   <div class="text  num1">我是娱乐</div>
+   <button>新闻</button>
+   <div class="text  num2">我是新闻</div>
+   <button>军事</button>
+   
+   <div class="text  num3">我是军事</div>
+  
+</body>
+</html>

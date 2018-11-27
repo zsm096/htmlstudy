@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="a"></div>
+    <div id="b"></div>
+    <div class="a"></div>
+    <div></div>
+</body>
+<script>
+     function select (obj) {
+        if(obj.slice(1,0)=='#'){
+           return getElementById(obj.slice(1))
+        }else{
+            if(obj.slice(1,0)=='.'){
+                return getElementsByClassName(obj.slice(1))
+            }else{
+                return getElementsByTagName(obj)
+            }
+        }
+    }
+console.log(selsct('#b'))
+console.log('.a')
+console.log('div')
+
+
+</script>
+</html>

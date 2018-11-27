@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米</title>
+    <style>
+     *{
+           margin: 0;
+           padding: 0;
+       }
+       li{
+           list-style: none;
+       }
+       a{
+        text-decoration: none;
+       }
+      .fl{
+           float: left;
+      } 
+      .fr{
+          float: right;
+      }
+      .clear::after{
+         content: " ";
+         clear: both;
+         display:block;
+         width: 0;
+         height: 0;
+        }
+        .fs14{
+           font-size: 14px;
+        }
+       .fs16{
+           font-size: 16px;
+       }
+      .nav ul li a{
+        color: #b0b0b0;
+        font-size: 12px;
+       }
+       .nav ul li a:hover{
+        color: white;
+       }
+       .nav ul li{
+        color: #b0b0b0;
+        padding-left: 8px;
+        line-height: 40px;
+       }
+       .nav{
+            width: 100%;
+            height: 40px;
+            background-color: #333;
+            position: relative;
+            top: -4px;
+       }
+       .nav-left{
+        position: relative;
+        left: 40px;
+       }
+       .nav-right ul{
+            position: relative;
+            top: -41px;
+            padding: 0 40px;
+         }
+         #buycar{
+            position: relative;
+            left: 20px;
+            display: block;
+            height: 40px;
+            text-align: center;
+            background: #424242;
+            padding-left: 30px;
+            padding-right: 20px;
+        }
+        #buycar:hover{
+            background: white;
+            color: #ff6700;
+        }
+        #buycar img{
+            width: 20px;
+            height: 20px;
+            margin-right: 4px;
+            font-size: 20px;
+            line-height: 20px;
+            vertical-align: -5px
+        }
+        .db{
+            display: block;
+        }
+        .logo{
+            position: relative;
+            left: -16px;
+        }   
+        .num1 ul li a{
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            top: -36px;
+            left: 140px;
+            padding: 0 15px;
+            height: 40px;
+            line-height: 20px;
+        }
+        .num1 ul li a:hover{
+            color:#ff6700;
+        }
+        .num1 ul{
+            text-align: center;
+        }
+        .seacher1 {
+            position: absolute;
+            top:-68px;
+            right: 100px;
+            z-index: 1;
+            width: 240px;
+            height: 48px;
+            padding: 0 10px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            line-height: 48px;
+            outline: 0;
+            background:transparent;
+        }
+        .seacher2{
+            width: 48px;
+            height: 46px;
+            position: absolute;
+            top: -68px;
+            right:52px;
+            z-index: 1;
+            border: 1px solid #e0e0e0;
+            line-height: 48px;
+            outline: 0;
+            background:transparent;
+        }
+        .seacher2:hover{
+            background: #ff6700;
+        }
+        .seacher a{
+            position: absolute;
+            top: -50px;
+            left:1120px;
+            padding: 0 5px;
+            font-size: 12px;
+            background: #eee;
+            color: #757575;
+            /* height: 40px; */
+            }
+        .seacher a:hover{
+            background: #ff6700
+        }   
+            .cart-menu{
+               background: #000000;
+               opacity: 0.6;
+               width: 234px;
+               height: 460px;
+               margin-top: 20px;
+               position: absolute;
+               top:-20px;
+               left: 50px;
+            }
+            .menu{
+                  width: 1200px;
+                  margin-left: auto;
+                  margin-right:  auto;
+            }
+            .menu li a{
+                text-decoration: none;
+                color: #fff;
+               
+                height: 42px;
+                line-height: 42px;
+                font-size: 14px;  
+            }
+            .menu div div{
+                position: relative;
+                top: 25px;
+                display: block;
+                padding-left: 30px;
+            }
+            .menu div div:hover{
+                background: #ff6700;
+            }
+            /* .img-box{
+            position: relative;
+        } */
+            .menu-picture{
+                width: 1245px;
+                height: 460px;
+                position: absolute;
+                left: 50px;
+                display:block;
+                /* top: -234px; */
+            }
+        .img-box2-list{
+            background: #5F5750;
+            width: 234px;
+            margin-right: 15px;
+            height: 172px;
+            position: relative;
+            top: 172px;
+            left: 50px;
+        } 
+        .img-box2 ul li a{
+            display: block;
+            padding-top: 18px;
+            padding-left: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #fff;
+            opacity: 0.6;
+            list-style-type: none;
+            font-size: 12px;
+      }
+      .img-box2 ul li a i{
+        display: block;
+        height: 24px;
+        margin-bottom: 4px;
+       font-size: 24px;
+       line-height: 24px;
+      }
+      .img-box2{
+          width: 100%;
+          position: absolute;
+          top: 300px;
+      }
+      .img-box2-picture  {
+        width: 322px;
+        height: 172px;
+        margin-right: 15px;
+        position: relative;
+        left: 50px;
+      }
+      .shopping-top p{
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 58px;
+        color: #333;
+      }
+    </style>
+</head>
+<body>
+    <!-- 广告 -->
+    <div class="bar">
+            <img style="height:121px;"  width="100%" class="height" src="../../小米图片/cms_15337986888589_wGuOE.jpg" alt=" ">
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+         <div class="nav-left">
+            <ul class="clear">
+             <li class="fl"><a href="">小米商城</a></li>
+             <li class="fl">|</li>
+             <li class="fl"><a href="">MIUI</a></li>
+             <li class="fl">|</li>
+             <li class="fl"><a href="">loT</a></li>
+             <li class="fl">|</li>
+             <li class="fl"><a href="">云服务</a></li>
+             <li class="fl">|</li>
+             <li  class="fl"><a >金融</a></li>
+             <li class="fl">|</li>
+             <li class="fl"><a href="">有品</a></li>
+             <li class="fl">|</li>
+             <li class="fl"><a href="">小爱开放平台</a></li>
+             <li class="fl">|</li>
+             <li class="fl" ><a href="">政企服务</a></li>
+             <li class="fl">|</li>
+             <li class="fl"><a href="">Select Regio</a></li>
+            </ul>
+         </div>
+         <div class="nav-right">
+            <ul class="clear fr">
+                <li class="fl"><a  href="">登录</a></li>
+                <li class="fl">|</li>
+                <li class="fl"><a href="">注册</a></li>
+                <li class="fl">|</li>
+                <li class="fl"><a href="">消息通知</a></li>
+                <li class="fl"></li>
+                <li class="fl"> <a id="buycar" href=""><img id="bc" src="../../小米图片/692a6c3b0a93a24f74a29c0f9d68ec71.png" alt=""> 购物车(0)</a></li>
+                <li class="fl"></li>
+            </ul>
+        </div>
+    </div>
+        <div class="num1">
+           <div class="logo">
+            <img class="db fl" style="width: 55px;height: 55px;padding: 10px;" src="../../logo.png" alt="" title="小米官网">
+            <img class="db" style="display: block" src="../../163git66.gif" alt="">
+           </div>
+            <ul class="clear db">
+                <li class="fl"><a class="fs16" href="">小米</a></li>
+                <li class="fl"><a class="fs16" href="">红米</a></li>
+                <li class="fl"><a class="fs16" href="">电视</a></li>
+                <li class="fl"><a class="fs16" href="">笔记本</a></li>
+                <li class="fl"><a class="fs16" href="">盒子</a></li>
+                <li class="fl"><a class="fs16" href="">新品</a></li>
+                <li class="fl"><a class="fs16" href="">路由器</a></li>
+                <li class="fl"><a class="fs16" href="">智能硬件</a></li>
+                <li class="fl"><a class="fs16" href="">服务</a></li>
+                <li class="fl"><a class="fs16" href="">社区</a></li>
+            </ul>
+        </div>
+    <div style="position: relative;width: 100%;" class="seacher">
+        <div style="position: relative;">  
+                <input class="seacher1" type="search" id="search" name="keyword" autocomplete="off" data-search-config="{'defaultWords':[{'Key':'小米6X','Rst':6},{'Key':'小米MIX&nbsp;2S','Rst':5},{'Key':'黑鲨游戏手机','Rst':3},{'Key':'红米Note&nbsp;5','Rst':6},{'Key':'红米5A','Rst':13},{'Key':'小米电视4C','Rst':5},{'Key':'电视32英寸','Rst':3},{'Key':'笔记本pro','Rst':5},{'Key':'空气净化器','Rst':11},{'Key':'净水器','Rst':8}]}">
+                <a href="https://www.mi.com/mi8/" >小米8</a> 
+                <!-- <a class="seacher1-text2" href="">小米MIX  2S</a>   -->
+                <input  type="image" class="seacher2" src="../../未标题-1.png" alt="submit" value="">
+        </div>
+    </div>
+    <!-- 中间黑色边框 -->
+   <div class="img-box clear">
+        <a href="">
+                <img class="menu-picture" src="../../小米图片/xmad_15337239161431_iKufU.jpg" alt="">
+         </a>
+        <div class="menu">
+                 <div class="cart-menu clear">
+                        <div class="clear ">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                        <div class="clear">
+                                <li><a class="fs14 fl" href="">手机卡    电话卡</a></li> 
+                                <li><a  class="fs14 fr" href="">></a></li>
+                        </div>
+                 </div>
+        </div>
+        <div class="img-box2 clear clear">
+                    <ul class="img-box2-list flag clear fl">
+                            <li class="fl"><a href="http://www.mi.com/compare/" data-stat-aid="AA13424" data-stat-pid="2_44_1_250" data-log_code="31pchomesix_small_icon001003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.1&amp;adm=2227" target="_blank" data-stat-id="AA13424+2_44_1_250" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-AA13424+2_44_1_250', 'http://www.mi.com/compare/', 'pcpid', '31pchomesix_small_icon001003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.1&amp;adm=2227']);"><i class="iconfont"></i>选购手机</a></li>
+                            <li class="fl"><a href="http://qiye.mi.com/" data-stat-aid="AA10868" data-stat-pid="2_44_2_251" data-log_code="31pchomesix_small_icon002003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.2&amp;adm=613" target="_blank" data-stat-id="AA10868+2_44_2_251" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-AA10868+2_44_2_251', 'http://qiye.mi.com/', 'pcpid', '31pchomesix_small_icon002003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.2&amp;adm=613']);"><i class="iconfont"></i>企业团购</a></li>
+                            <li class="fl"><a href="//order.mi.com/f" data-stat-aid="AA17703" data-stat-pid="2_44_3_252" data-log_code="31pchomesix_small_icon003003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.3&amp;adm=616" target="_blank" data-stat-id="AA17703+2_44_3_252" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-AA17703+2_44_3_252', '//order.mi.com/f', 'pcpid', '31pchomesix_small_icon003003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.3&amp;adm=616']);"><i class="iconfont"></i>F码通道</a></li>
+                            <li class="fl"><a href="https://www.mi.com/mimobile/" data-stat-aid="AA11244" data-stat-pid="2_44_4_253" data-log_code="31pchomesix_small_icon004003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.4&amp;adm=862" target="_blank" data-stat-id="AA11244+2_44_4_253" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-AA11244+2_44_4_253', 'https://www.mi.com/mimobile/', 'pcpid', '31pchomesix_small_icon004003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.4&amp;adm=862']);"><i class="iconfont"></i>不限量卡</a></li>
+                            <li class="fl "><a href="//huanxin.mi.com" data-stat-aid="AA12084" data-stat-pid="2_44_5_254" data-log_code="31pchomesix_small_icon005003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.5&amp;adm=1386" target="_blank" data-stat-id="AA12084+2_44_5_254" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-AA12084+2_44_5_254', '//huanxin.mi.com', 'pcpid', '31pchomesix_small_icon005003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.5&amp;adm=1386']);"><i class="iconfont"></i>以旧换新</a></li>
+                            <li class="fl "><a href="http://recharge.10046.mi.com/" data-stat-aid="AA10871" data-stat-pid="2_44_6_255" data-log_code="31pchomesix_small_icon006003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.6&amp;adm=617" target="_blank" data-stat-id="AA10871+2_44_6_255" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-AA10871+2_44_6_255', 'http://recharge.10046.mi.com/', 'pcpid', '31pchomesix_small_icon006003#t=normal&amp;act=other&amp;page=home&amp;bid=3030363.6&amp;adm=617']);"><i class="iconfont"></i>话费充值</a></li>
+                    </ul> 
+                <img class="fl img-box2-picture" src="../../小米图片/xmad_15331255209134_dkLzv.jpg" alt=""> 
+                <img class="fl img-box2-picture" src="../../小米图片/xmad_15332896813315_hGjxI.jpg" alt=""> 
+                <img class="fl img-box2-picture" src="../../小米图片/xmad_15335514135834_MauPT.jpg" alt="">
+        </div>
+   </div>
+   <!-- 小米闪购 -->
+   <div class="shopping">
+       <div class="shopping-top">
+           <p>小米闪购</p>
+           <a class="" href="javascript: void(0);" data-stat-id="b1fd3b7d46cff9ea" onclick="_msq.push(['trackEvent', '81190ccc4d52f577-b1fd3b7d46cff9ea', 'javascript:void0', 'pcpid', '']);"></a>
+       </div>
+       <div class="shopping-buttom">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+       </div>
+      
+
+   </div>
+</body>
+</html>

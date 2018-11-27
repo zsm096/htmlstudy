@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .clear:after{
+        content: '';
+        display: block;
+        clear: both;
+        width: 0;
+        height: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+    }
+    .oDiv{
+        width: 800px;
+        height: 180px;
+        border-top:1px dashed #ccc;
+        margin-left: 100PX;
+        /* padding-left: 20PX; */
+        padding: 12px 0;
+    }
+    .number{
+        color:#bbb;
+        font-size: 12px
+    }
+    .Img{
+        width: 100px;
+        height: 180px;
+        margin: 0px 10px;
+    }
+ 
+    </style>
+</head>
+<body>
+        <div id ="btn">
+                <button>上一页</button>
+                <button>首页</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>下一页</button>
+            </div>
+        
+        
+       
+    <script src="jq封装.js"></script>
+   <script>
+//    $.ajax({
+//        url:'json/2.json',
+//        data:{
+//         username:'zsm',
+//         password:'sdfgh',
+//         code:'123456'
+//        },
+//        type:'GET',
+//        dataType:'json',
+//        success:function(res){
+//            //请求成功后触发
+//            //res-----请求到的数据
+//            console.log(res)
+//        },
+//        error:function(){
+//            //请求失败后触发
+//        }
+
+//    })
+    var start=0
+    var a
+    var btns=document.getElementsByTagName('button')
+    for(var i=0;i<btns.length;i++){
+        btns[i].index=a
+        btns[1].onclick=function(){
+            alert()
+           start=20
+        }
+    }
+   
+
+
+
+   $.ajax({
+      // url:'json/a.json?start=21&count=20',
+      url:"http://api.douban.com/v2/movie/top250?start="+start+"&count=20",
+    //   url:"http://api.douban.com/v2/movie/top250?start=25&count=25",
+
+       type:'GET',
+       dataType:'jsonp',
+       success:function(res){
+           //请求成功后触发
+           //res-----请求到的数据
+        //    console.log(res.subjects)
+           var body=document.getElementsByTagName('body')[0];
+           for(var i=0;i<res.subjects.length;i++){
+               var oDiv=document.createElement('div')
+               oDiv.classList="oDiv clear"
+               body.appendChild( oDiv)
+
+                var number=document.createElement('span')
+                number.classList='number fl'
+                number.innerHTML=i+1
+                // number.innerHTML=res.subjects[i].title
+                oDiv.appendChild(number)
+
+                
+                var Img=document.createElement('img')
+                Img.src=res.subjects[i].images.small
+                Img.classList="Img fl"
+                oDiv.appendChild(Img)
+
+           }
+
+
+
+
+
+
+
+
+
+
+       },
+       error:function(){
+           //请求失败后触发
+       }
+
+   })
+   
+   </script>
+  
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="user" type="text"/>
+    <input id="pwd" type="password"/>
+    <button>登录</button>
+    <script>
+        document.cookie='user0={"name":"sinal","pwd":"123"}'
+        document.cookie='user1={"name":"sinal1","pwd":"123"}'
+        document.cookie='user2={"name":"sinal2","pwd":"123"}'
+
+
+        var str = document.cookie
+        var arr0 = str.split(';')
+        console.log(arr0)
+        var arr1 = []
+        // for (var i=0;i<arr0.length;i++){
+        //     arr0[i]= arr0[i].split('=')
+        //     arr0[i][0] = arr0[i][0].trim()
+        //     arr0[i][1] = arr0[i][1].trim()
+        //     if (arr0[i][0].indexOf('user')==0 &&　arr0[i][0].length>4) {
+        //         arr0[i][1] = JSON.parse(arr0[i][1])
+        //         arr1.push(arr0[i])
+        //     }
+        // }
+        // console.log(arr1)
+        // document.querySelector('button').onclick=function(){
+        //     var user = document.getElementById('user')
+        //     var pwd = document.getElementById('pwd')
+        //     for (var j=0;j<arr1.length;j++) {
+        //         if(arr1[j][1].name == user.value){
+        //             if(arr1[j][1].pwd == pwd.value){
+        //                 console.log('登录成功')
+        //                 break;
+        //             }else{
+        //                 console.log('密码输入有误，请重新输入')
+        //                 pwd.value = ''
+        //                 break;
+        //             }
+        //         }else{
+        //             if (j==arr1.length-1) {
+        //                 console.log('还没注册，快去注册吧')
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>

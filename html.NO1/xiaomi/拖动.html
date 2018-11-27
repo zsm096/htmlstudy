@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li{
+        width: 100px;
+        height: 50px;
+        background: #111;
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    div{
+        width: 300px;
+        height: 300px;
+        background: #f90;
+        margin: 0 auto;
+    }
+    #div{
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+    }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li draggable="true">123</li>
+        <li draggable="true">456</li>
+        <li draggable="true">789</li>
+
+
+
+    </ul>
+
+    <div>
+
+
+    </div>
+
+    <div id="div">
+
+
+    </div>
+    <img src="图片/153620504604129587.jpg" alt="">
+  <script>
+  var lis=document.querySelectorAll('li') 
+  var oimg=document.getElementsByTagName('img')[0]
+  for(var i=0;i<lis.length;i++){
+      lis[i].ondragstart=function(e){
+          var e=e||window.e;
+        //   console.log(e.target)
+          e.dataTransfer.setData('elem',this.nodeName)
+          e.dataTransfer.setData('value',this.innerHTML)
+          e.dataTransfer.setDragImage(oimg,300,10)
+          this.style.background='#f00'
+      }
+      lis[i].ondragend=function(){
+          this.style.background='#0f0'
+      }
+      lis[i].ondrag=function(){
+          this.style.background='#00f'
+      }
+     
+  }
+  var odiv=document.getElementsByTagName('div')[0]
+    odiv.ondragenter=function(){
+        this.style.background='#ccc'
+    }
+    odiv.ondragleave=function(){
+        this.style.background='#333'
+    }
+    odiv.ondragover=function(){
+        this.style.background='#1f0'
+        return false
+    }
+
+
+    odiv.ondrop=function(e){
+        var e=e||window.e;
+        var elem=e.dataTransfer.getData('elem')
+        // console.log(elem.toLowerCase())
+        var value=e.dataTransfer.getData('value')
+        var newelem=document.createElement(elem.toLowerCase())
+        newelem.innerHTML=value;
+        this.appendChild( newelem)
+         this.style.background='#11f'
+       
+    }
+    var iddiv=document.getElementById('div')
+    
+    iddiv.ondragover=function(){
+        this.style.background='#1f0'
+        return false
+    }
+    iddiv.ondrop=function(e){
+        var e=e||window.event;
+        e.preventDefault()
+        // console.log(e.dataTransfer.files)
+
+        var fs=e.dataTransfer.files;
+     
+        var fd=new FileReader()
+
+        fd.readAsDataURL(fs[0])
+        fd.onload=function(){
+            console.log(fd.result)
+            var newimg=document.createElement('img')
+            newimg.src=fd.result;
+            iddiv.appendChild(newimg)
+        }
+    }  
+  </script>
+
+</body>
+</html>

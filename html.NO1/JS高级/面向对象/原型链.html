@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    console.log(typeof Function.prototype) // function
+    console.log(typeof Object.prototype)   // object
+    console.log(typeof Number.prototype)   // object
+    console.log(typeof Boolean.prototype)  // object
+    console.log(typeof String.prototype)   // object
+    console.log(typeof Array.prototype)    // object
+    console.log(typeof RegExp.prototype)   // object
+    console.log(typeof Error.prototype)    // object
+    console.log(typeof Date.prototype)     // object
+    console.log(typeof Object.prototype)   // object
+
+    function Fn() { }
+        Fn.prototype.name = '王福朋';
+        Fn.prototype.getYear = function () {
+            return 1988;
+        };
+        var fn = new Fn();
+        console.log(fn.name);
+        console.log(fn.getYear());
+        
+    
+    </script>
+</body>
+</html>

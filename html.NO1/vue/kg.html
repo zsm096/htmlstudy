@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <script src="jq封装.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+   *{
+       margin: 0;
+       padding: 0
+   }
+    .content{
+        width: 10rem;
+    }
+    .row{
+     width: 10rem;
+    }
+    </style>
+</head>
+<body>
+    <script>
+            document.querySelector('html').style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    <div class="content" id="app-kg">
+        <div class="list row"  v-for="(item,index) in list">
+            
+            <div class="col-xs-1 add">
+                {{item.add}}
+            </div>
+            <div class="col-xs-1" v-if="index==0" style="color: red">
+                {{index+1}}
+            </div>
+            <div class="col-xs-1" v-if="index==1" style="color:orangered">
+                {{index+1}}
+            </div>
+            <div class="col-xs-1" v-if="index==2" style="color: #f90">
+                {{index+1}}
+            </div>
+            <div class="col-xs-1" v-if="index>2">
+                {{index+1}}
+            </div>
+            <div class="col-xs-7">
+                <p>{{item.title}}  <span v-if="item.mv==true">MV</span></p>
+                <p>{{item.video}}</p>
+            </div>
+            <div  class="col-xs-1">
+                <span class="glyphicon glyphicon-option-horizontal"></span>
+            </div>
+          </div>
+    </div>
+
+
+<script>
+    var app_kg=new Vue({
+        el:"#app-kg",
+        data:{
+            list:[
+                {
+                    title:"沙漠骆驼",
+                    video:"展展与罗罗-沙漠骆驼",
+                    number:1,
+                    add:"+",
+                    mv:true
+                },
+                {
+                    title:"沙漠骆驼",
+                    video:"展展与罗罗-沙漠骆驼",
+                    number:1,
+                    add:"+",
+                    mv:true
+                },
+                {
+                    title:"沙漠骆驼",
+                    video:"展展与罗罗-沙漠骆驼",
+                    number:1,
+                    add:"+",
+                    mv:false
+                },
+                {
+                    title:"沙漠骆驼",
+                    video:"展展与罗罗-沙漠骆驼",
+                    number:1,
+                    add:"+",
+                    mv:true
+                },
+            ]
+        }
+    })
+    
+</script> 
+</body>
+</html>

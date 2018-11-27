@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var arr=new Array(1,2,3,4,5)
+    var arr1=[1,2,3]
+    // console.log(arr.push===arr1.push)//true
+
+    //原型
+    function Animal(){
+        this.name='name'
+    }
+    var dog=new Animal()
+    var duck=new Animal()
+    // console.log(dog.sing===duck.sing)//false
+    // console.log(dog)//false
+
+    Animal.prototype.sing=function(){
+        console.log('原型上的sing方法')
+    }
+    var dog=new Animal()
+    var duck=new Animal()
+    // console.log(dog.sing===duck.sing)//true
+    // console.log(dog) //Object
+    Animal.prototype.sing()//原型上的sing方法
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{
+         margin: 0px;
+         padding: 0px;
+     }   
+    .oDiv{
+        position: relative;
+        width: 400px;
+        height: 300px;
+    }
+    .oDiv video{
+        position: absolute;
+        width: 400px;
+        height: 300px;
+    }
+    .btn1{
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        background: url('图片/play (2).png');
+        top:44%;
+        left: 40%;
+        border: none;
+        z-index: 1;
+        outline: none;
+    }
+    .btn2{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: url('图片/音量 (2).png');
+        top:75%;
+        left: 75%;
+        border: none;
+        z-index: 1;
+        outline: none;
+    }
+    .oDiv img{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top:75%;
+        left: 85%;
+      
+        z-index: 1;
+        
+    }
+    .div1{
+        width: 270px;
+        height: 6px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        position:absolute;
+        top:77%;
+        left: 5%;
+    }
+    .div2{
+        width: 13px;
+        height: 13px;
+        background: #111;
+        border-radius: 10px;
+        position:absolute;
+        top: -3px;
+        left: 0px;
+       
+    }
+    
+    </style>
+</head>
+<body>
+        <video src="C:/Users/Administrator/Desktop/html.NO1/xiaomi/mov_bbb.mp4" controls></video>
+    <div class="oDiv">
+            <video id="video" src="C:/Users/Administrator/Desktop/html.NO1/xiaomi/mov_bbb.mp4"></video>
+            <!-- <img src="图片/pause.png" alt=""> -->
+            <button class="btn1"></button>
+            <button class="btn2"></button>
+            <img src="图片/全屏 (3).png" alt="">
+        
+            
+            <div class="div1">
+    
+                <div class="div2">
+            
+                </div> 
+            </div>
+    
+    </div>
+    
+  
+    
+    <br><br><br>
+   
+    <script>
+    var video=document.getElementById('video')
+    var btn1=document.getElementsByClassName('btn1')[0]
+    var btn2=document.getElementsByClassName('btn2')[0]
+    var a=true
+    
+    btn1.onclick=function(){
+    if(a==true){
+        video.play()
+        this.style.background="url('图片/pause (1).png')"
+        a=false;
+    }
+
+    else{
+            video.pause()
+            this.style.background="url('图片/play (2).png')"
+            a=true;
+            
+        }
+
+    }
+  
+    btn2.onclick=function(){
+      
+    if(a==true){
+        video.muted=true
+        this.style.background="url('图片/静音 (1).png')"
+        a=false;
+    }
+
+    else{
+        video.muted=false;
+            this.style.background="url('图片/音量 (2).png')"
+            a=true;
+            
+        }
+
+    }
+
+     var div2=document.getElementsByClassName('div2')[0]
+     var div1=document.getElementsByClassName('div1')[0]
+     
+     var num=0
+     setInterval(function(){
+        //  console.log(video.currentTime)
+        var num=video.currentTime/video.duration
+       
+ 
+        div2.style.left=parseInt(div1.clientWidth)*num-13+'px'
+    
+        },1000)
+     div2.ond
+
+    </script>
+</body>
+</html>

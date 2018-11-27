@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function createCar(sColor,iDoors,iMpg) {
+    //     var oTempCar = new Object;
+    //     oTempCar.color = sColor;
+    //     oTempCar.doors = iDoors;
+    //     oTempCar.mpg = iMpg;
+    //     oTempCar.showColor = function() {
+    //         alert(this.color);
+    //     };
+    //     return oTempCar;
+    //     }
+
+    //     var oCar1 = createCar("red",4,23);
+    //     var oCar2 = createCar("blue",3,25);
+
+    //     oCar1.showColor();		//输出 "red"
+    //     oCar2.showColor();		//输出 "blue"
+    
+    // // console.log(red)
+    
+    function Car(sColor,iDoors,iMpg) {
+        this.color = sColor;
+        this.doors = iDoors;
+        this.mpg = iMpg;
+        this.showColor = function() {
+            alert(this.color);
+        };
+        }
+
+        var oCar1 = new Car("red",4,23);
+        var oCar2 = new Car("blue",3,25);
+    </script>
+</body>
+</html>

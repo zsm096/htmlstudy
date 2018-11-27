@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../../换肤/104443lcdsaanaeso6aq9r.jpg.thumb.jpg" alt="">
+    <img src="../../换肤/104446sibo1o63okk1wb1u.jpg.thumb.jpg" alt="">
+    <img src="../../换肤/1253668878835.jpg" alt="">
+    <img src="../../换肤/1253668879267.jpg" alt="">
+    <img src="../../换肤/1a46b64ee0e3b873854282feb5faa015.jpg" alt="">
+    <div>
+               123456789
+    </div>
+    <script>
+        //   var imgs=document.getElementsByTagName('img');
+        //   var Odiv=document.getElementsByTagName('div')[0];
+        //   for(var i=0;i<imgs.length;i++){
+        //       imgs[i].onclick=function(){
+        //           Odiv.style.background="url('"+this.src+"')"
+        //       }
+        //   }
+        var imgs=document.getElementsByTagName('img');
+          var Odiv=document.getElementsByTagName('div')[0];
+          for(var i=0;i<imgs.length;i++){
+              imgs[i].onclick=function(){
+                  var url=this.src;
+                  var url1=url.split("/")
+                  var last=url1.slice(url1.length-1);
+
+                  Odiv.style.background="url('../../换肤/"+last+"')"
+              }
+          }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    btn1,btn2{
+        width: 30px;
+        height: 20px;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <audio src="file:///D:/Documents/Downloads/song.ogg" controls></audio>
+    <audio controls>
+      
+        <source src="" type="">
+
+
+
+    </audio>
+    <br>d
+    <video src="file:///D:/Documents/Downloads/movie.ogg" controls></video>
+    <br>
+    <button class="btn1">播放</button>
+    <button class="btn2">暂停</button>
+
+    <button class="btn3">加载</button>
+
+
+    <script>
+    var video=document.querySelector('video')
+    var btn1=document.getElementsByClassName('btn1')[0]
+    var btn2=document.getElementsByClassName('btn2')[0]
+    var btn3=document.getElementsByClassName('btn3')[0]
+    btn1.onclick=function(){
+    video.play()
+
+
+    }
+    btn2.onclick=function(){
+    video.pause()
+
+
+    }
+    btn3.onclick=function(){
+    video.load()
+
+
+    }
+    
+    </script>
+    
+</body>
+</html>

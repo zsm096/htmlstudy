@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    canvas{
+        /* background: url('file:///C:/Users/Administrator/Desktop/html.NO1/%E5%88%AE%E5%88%AE%E5%8D%A1/%E4%B8%AD%E5%A5%96.jpg') no-repeat; */
+        background-size: 100%
+        
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <!-- <img src="timg.jpg" alt=""> -->
+    <canvas id="canvas" width="650" height="500"></canvas>
+
+    <script>
+    var canvas=document.getElementById('canvas')
+    var ctx=canvas.getContext('2d');
+    
+    var arr=['file:///C:/Users/Administrator/Desktop/html.NO1/%E5%88%AE%E5%88%AE%E5%8D%A1/%E4%B8%AD%E5%A5%96.jpg','file:///C:/Users/Administrator/Desktop/html.NO1/%E5%88%AE%E5%88%AE%E5%8D%A1/timg.jpg'];
+   
+    var num = Math.floor(Math.random()*2);
+    var _src=arr[num];
+    var isMouseDown=false;
+    canvas.style.background= "url('" + _src + "') no-repeat";
+
+
+    // 
+  
+    ctx.fillStyle='#ccc'
+    ctx.rect(0,0,650,500)
+    ctx.fill()
+    ctx.beginPath()
+    ctx.globalCompositeOperation='destination-out'
+    
+    canvas.onmousedown=function(e){
+        //    console.log(e.clientX)
+        //    console.log(e.clientY)
+            //   console.log(this.offsetLeft)
+            //   console.log(this.offsetTop)
+    ctx.arc(e.clientX-this.offsetLeft,e.clientY-this.offsetTop,30,0,2*Math.PI,false)
+    ctx.fill()
+    ctx.closePath()
+
+    }
+    canvas.addEventListener('mousedown',function(){
+        isMouseDown=true;
+        return false;
+    },false)
+
+  canvas.onmousemove=function(e){
+      if(isMouseDown){
+          ctx.beginPath()
+          ctx.arc(e.clientX-this.offsetLeft,e.clientY-this.offsetTop,30,0,2*Math.PI,false)
+        ctx.fill()
+         ctx.closePath()
+            
+          
+      }
+  }
+  canvas.onmouseup=function(){
+    isMouseDown=false;
+  }
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

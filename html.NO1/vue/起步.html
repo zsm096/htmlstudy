@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <style>
+     #app{
+        color: #f00
+     }
+    .red{
+        color:#f00;
+    }
+    .green{
+        color:green;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+     <!-- {{name}}
+     {{a*5}}
+     {{boo?1:2}}
+     {{str.split('')}} -->
+     <!-- <input type="text" v-model='b'>
+ 
+     <div>
+        {{b}}
+     </div>
+     <img :src='"图片/"+src+".jpg"' v-bind:width="3*width+'px'"  alt="123">
+     <a :href="href">百度</a> -->
+      <!-- <div v-if='boo'>这是真的</div>
+      <div v-else>这是假的</div>
+
+      <div v-if='num==1'>这个数是1</div>
+      <div v-else-if='num==2'>这个数是2</div>
+      <div v-else>这个数是既不是1 也不是2</div>
+
+
+      <div v-if='num==2'>这个数是2</div>
+      <div v-if='num==1'>这个数是1</div>
+      <div v-if='num==3'>这个数是3</div>
+
+
+      <div v-if='status=="add"'>+</div>
+      <div v-if='status=="minus"'>-</div>
+      <button v-if='status=="add"'>+</button>
+      <button v-if='status=="minus"'>-</button>
+
+
+      <div v-show='false'>sjhdiowwudhwih;ascblducbhwludblshdu</div> -->
+
+      <button v-if='status=="add"'  :class="{green:true}">+{{num}}</button>
+      <button v-if='status=="minus"'  :class="{red:true}">-{{num}}</button>
+
+      <div>
+
+      </div>
+
+
+    </div>
+
+    <div id="app1" :title="title">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </div>
+
+
+    <script>
+     var app=new Vue({
+         el:'#app',
+         data:{
+          name:'zsm',
+          a:1,
+          boo:true,
+          str:'hello',
+          b:'',
+          src:1,
+          width:200,
+          href:'http://www.baidu.com/',
+          boo:false,
+          num:3,
+          status:'minus'
+         }
+     })
+
+
+     var app1=new Vue({
+         el:"#app1",
+         data:{
+             title:"页面加载于"+ new Date().toLocaleString()
+         }
+     })
+    //  app. status = false
+    </script>
+</body>
+</html>

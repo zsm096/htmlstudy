@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{
+       padding:0;
+       margin:0;
+    }
+    .calculater{
+     width: 1000px;
+     height:50px;
+     margin: auto;
+     margin-top: 30px;
+     border-spacing: 0px;
+    }
+    .border1,.border3,.border5{
+        width: 289px;
+        height: 50px;
+        border: solid 2px  #EA6F30;
+        background: #2371D3;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        border-radius: 5px;
+
+    }
+    .border2,.border4{
+        width: 50px;
+        height: 50px;
+        border: solid 2px #EA6F30;
+        background: #2371D3;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .content{
+     width: 500px;
+     height: 386px;
+     margin: auto;
+     padding-left: 2px;
+     padding-top: 2px;
+     margin-top: 30px;
+     border: solid 6px #2371D3;
+     border-spacing: 0px;
+    }
+
+    .btn{
+        cursor: pointer;
+        width:96px;
+        height:96px;
+        border: solid 1px #EA6F30;
+        background: #2371D3;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    #equality{
+    cursor: pointer;
+    width: 96px; 
+    height: 288px;
+    background: #2371D3;
+    border: solid 1px #EA6F30;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    display:block;
+    position: relative;
+    left:402px;
+    top: -288px;
+    }
+    .btn:hover{
+   background: #EA6F30; 
+   }
+   #equality:hover{
+    background: #EA6F30; 
+   }
+
+    </style>
+</head>
+<body>
+    <div class="calculater">
+        <input class="border1" type="text" value="0">
+        <input class="border2" type="button" value="+">
+        <input class="border3" type="text" value="0">
+        <input class="border4" type="button" value="=">
+        <input class="border5" type="text" value="0">
+    </div>
+    <div>
+        <div class="content">
+            <div>
+                    <input class="btn number" type="button" value='1'>
+                    <input class="btn number" type="button" value='2'>
+                    <input class="btn number" type="button" value='3'>
+                    <input class="btn symbol" type="button" value='+'>
+                    <input class="btn cl" type="button" value='AC'>
+            </div>
+             <div>
+                    <input class="btn number" type="button" value='4'>
+                    <input class="btn number" type="button" value='5'>
+                    <input class="btn number" type="button" value='6'>
+                    <input class="btn symbol" type="button" value='-'>
+             </div>
+             
+           <div>
+                <input class="btn number" type="button" value='7'>
+                <input class="btn number" type="button" value='8'>
+                <input class="btn number" type="button" value='9'>
+                <input class="btn symbol" type="button" value='*'>
+           </div>
+           <div>
+                <input class="btn number" type="button" value='00'>
+                <input class="btn number" type="button" value='0'>
+                <input class="btn number" type="button" value='.'>
+                <input class="btn symbol" type="button" value='/'>
+           </div>
+           <div><input id="equality"  class="btn" type="button" value='='></div>
+        </div>
+    </div>
+    <script>
+       var border1=document.getElementsByClassName('border1')[0];
+       var border2=document.getElementsByClassName('border2')[0];
+       var border3=document.getElementsByClassName('border3')[0];
+       var border4=document.getElementsByClassName('border4')[0];
+       var border5=document.getElementsByClassName('border5')[0];
+       var cl=document.getElementsByClassName('cl')[0];
+       var ipts=document.getElementsByClassName('number');
+       var syls=document.getElementsByClassName('symbol');
+       var a;
+       border1.onclick=function(){
+            a=true;
+       };
+       border3.onclick=function(){
+            a=false;;
+       };
+            for(var i=0;i<syls.length;i++){
+               syls[i].onclick=function(){
+               border2.value =this.value ;
+              }
+            }
+            for(var i=0;i<ipts.length;i++){
+               ipts[i].onclick=function(){
+                if(a==true){
+                    border1.value =border1.value+this.value;
+                }
+                else{
+                    border3.value =border3.value+this.value;
+                }
+              }
+           }
+           border4.onclick=function(){
+               switch(border2.value){
+                   case "+":border5.value=parseFloat(border1.value)+parseFloat(border3.value);break;
+                   case "-":border5.value=parseFloat(border1.value)-parseFloat(border3.value);break;
+                   case "*":border5.value=parseFloat(border1.value)*parseFloat(border3.value);break;
+                   case "/":border5.value=parseFloat(border1.value)/parseFloat(border3.value);break;
+                   
+               }
+           }
+           cl.onclick=function(){
+                   border1.value="0";
+                   border2.value="+";
+                   border3.value="0";
+                   border4.value="=";
+                   border5.value="0";
+           }
+    </script>
+   <!-- <script>
+     通过标签名称获取div
+    var odiv=document.getElementsByTagName('div');
+      在div里通过标名称获取input
+    var ipts  
+   
+   </script> -->
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <style>
+    .bgcolor{
+        padding: 10px;
+        background: #f90;
+        border: 1px solid #ccc;
+    }
+    .row>div{
+        height: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div id="app2" class="row">
+       <div class="col-lg-3" v-for="x in list" :class="{bgcolor:boo}">
+           {{x.name+"今年"+x.age+"岁了"}}
+        </div>
+        <div class="col-lg-3" v-for="(value,key,index) in obj">
+          {{index}}.{{ key }}: {{ value }}
+        </div>
+    </div>
+
+    <script>
+    
+    var app2=new Vue({
+        el:"#app2",
+        data:{
+           list:[
+               {
+                   name:"aaa",
+                   age:"1",
+               },
+               {
+                   name:"bbb",
+                   age:"2",
+               },
+               {
+                   name:"ccc",
+                   age:"3",
+               },
+               {
+                   name:"ddd",
+                   age:"4",
+               },
+           ],
+           boo:true,
+           obj:{
+                   name:"bbb",
+                   age:"2",
+           }
+        }
+    })
+    </script>
+</body>
+</html>

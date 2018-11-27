@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    函数: 
+    alert() console.log() parseInt() document.write()
+
+    函数的调用方法 函数的名称()
+
+    var 变量名称 = 值;
+    function 函数名称 (){}
+    var 函数名称 = function(){}
+    <script>
+        // 可复用 调用执行  精简代码
+        function fun(){
+            // 执行代码块
+            alert(123)
+        }
+        var fun1 = function(){
+            alert('fun1')
+        }
+        // fun();
+        // fun1();
+
+        function add(x,y) {  // 形参
+           alert(x+y)
+        }
+
+        // alert(x)
+        // add(1,2)  //  实参
+        // add(3,4)
+
+        function multTable (x) {
+            for (var i=1;i<(x+1);i++) {
+                // 9次
+                for (var j=1;j<=i;j++) {
+                    // 9次
+                    document.write(i + '*' + j + '=' + i*j)
+                    document.write('&nbsp;&nbsp;&nbsp;')
+                }
+                document.write('<br/>')
+            }
+        }
+        // multTable(7);
+
+
+        // 函数的执行结果就是函数的返回值
+
+        function result(){
+            return 0;
+            // return下面的函数体不执行
+        }
+        // result()
+
+        /*
+            无参  无返回值
+            有参  无返回值
+            无参  有返回值
+            有参  有返回值
+        */
+
+        function localVar (){
+            var a = 1;
+            // alert(a)
+        }
+        // localVar()
+        // alert(a) // a is not defined
+
+        // 函数内部定义的变量属于函数的局部变量，在函数外不能直接使用
+
+         function localVar1 (){
+            var a = 1;
+            // alert(a)
+            return a
+        }
+        // alert(localVar1()+1) // 2
+
+        // 函数里面可以使用全局变量
+        var num = 5;
+        function localVar2 (x) {
+            return (num + x);
+        }
+        localVar2(3)    // 8
+
+        function localVar3 (x) {
+            num = x
+        }
+        // alert(return (num+x))
+        alert(num); // 5*1   8*8 不知道*3
+        localVar3(3);
+        alert(num);   // 3
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;  /*去除li标签的小圆点*/
+        }
+        a{
+            text-decoration: none; /*去除a标签的下划线*/
+            color: #000;  /*去除a标签的默认字体颜色*/
+        }
+        .nav ul li{
+            float: left;
+            margin-right: 5px;
+            /* border-right: 1px solid #424242; */
+        }
+        /* .nav ul li:last-child{
+            border: none;
+        } */
+        .nav ul li a{
+            color: #b0b0b0;
+        }
+        .nav ul li a:hover{
+            color: #fff;
+        }
+        .nav{
+            position: relative;
+            top: -4px;
+            background: #333;
+            padding: 0 40px;
+            height: 40px;
+            line-height: 40px;  /*让文字垂直居中对齐*/
+        }
+        .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .fs12{
+            font-size: 12px;
+        }
+        .nav ul li:nth-child(2n){
+            color: #434343;
+        }
+        .mr10{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 广告 -->
+    <img width="100%" src="xiaomiImg/cms_15337986888589_wGuOE.jpg" alt="">
+    <!-- 导航 -->
+    <div class="nav clear">
+        <div class="nav-left fl">
+            <ul class="clear fs12">
+                <li><a href="http://">小米商城</a></li>
+                <li>|</li>
+                <li><a href="http://">MIUI</a></li>
+                <li>|</li>                
+                <li><a href="http://">LoT</a></li>
+                <li>|</li>                
+                <li><a href="http://">云服务</a></li>
+                <li>|</li>                
+                <li><a href="http://">金融</a></li>
+                <li>|</li>                
+                <li><a href="http://">有品</a></li>
+                <li>|</li>                
+                <li><a href="http://">小爱开放平台</a></li>
+                <li>|</li>                
+                <li><a href="http://">政企服务</a></li>
+                <li>|</li>                
+                <li><a href="http://">Select Region</a></li>
+            </ul>
+        </div>
+        <div class="nav-right fr">
+            <ul class="clear fs12">
+                <li><a href="http://">登录</a></li>
+                <li>|</li>
+                <li><a href="http://">注册</a></li>
+                <li>|</li>
+                <li><a href="http://">消息通知</a></li>
+                <li><a href="http://">购物车</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    .oDiv{
+          /* background: #fcc; */
+          width: 1000px;
+          height: 200px;
+          margin: 10px 0px;
+          border: 1px solid #ccc;
+    }
+    .Img{
+        float: left;
+        width: 120px;
+        height: 120px;
+        margin: 40px 20px 0px 20px;
+    } 
+    .title{
+        color:#333;
+        margin-top: 30px;
+    }
+    .price{
+        color:#f60;
+        position: relative;
+        top:100px;
+    }
+    .preprice{
+        margin-left: 30px;
+        color:rgb(85, 80, 80);
+        font-size: 12px;
+
+    }
+    </style>
+</head>
+<body>
+   <script>
+   var xmlhttp;
+        if (window.XMLHttpRequest)
+        {
+        xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.open("GET","json/2.json",true);
+        xmlhttp.send()
+        xmlhttp.onreadystatechange=function(){
+            console.log( xmlhttp.readyState)
+            if( xmlhttp.readyState==4 && xmlhttp.status==200){
+        
+            var data=JSON.parse(xmlhttp.responseText)
+            console.log(data)
+
+            var body=document.getElementsByTagName('body')[0];
+
+
+            for(var i=0;i<data.length;i++){
+                var oDiv=document.createElement('div')
+                oDiv.classList="oDiv clear"
+                body.appendChild( oDiv)
+
+                var Img=document.createElement('img')
+                Img.src=data[i].Img
+                Img.classList="Img"
+                oDiv.appendChild(Img)
+
+                var title=document.createElement('div')
+                title.classList=" title "
+                title.innerHTML=data[i].title
+                oDiv.appendChild( title)
+
+                var price=document.createElement('p')
+                price.classList="price"
+                price.innerHTML=data[i].price
+                oDiv.appendChild(price)
+
+                var preprice=document.createElement('del')
+                preprice.classList="preprice"
+                preprice.innerHTML=data[i].preprice;
+                price.appendChild( preprice)
+            }
+       
+         }
+    
+        }    
+       
+   
+   </script>
+   <!-- <img src="json/2.json" alt=""> -->
+</body>
+</html>

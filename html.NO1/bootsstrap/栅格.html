@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.css">
+    <style>
+    .div1{
+        height: 200px;
+        background: #f90;
+    }
+    .div2{
+        height: 300px;
+        background: #f00;
+    }
+    .div3 .row>div{
+        height: 100px;
+        background: linear-gradient(to right,blue,#ff9);
+        text-align: center;
+        font-size: 24px;
+        border:10px solid #f90;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container div1">
+        占据固定宽度
+    </div>
+    <div class="container-fluid div2">
+         占据100%宽
+    </div>
+    <div class="container div3">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                <!-- Optional: clear the XS cols if their content doesn't match in height -->
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            </div>
+    </div>
+    <div class="container div3">
+        <div class="row">
+            <div class="col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+            <div class="col-md-2 col-md-offset-2">.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <div class="clearfix visible-xs-block"></div>
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        </div>
+    </div>
+<div class="div3 container">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-2">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+      </div>
+
+</div>
+    <div class="div3 container">
+        <div class="row">
+            <div class="col-sm-9">
+              Level 1: .col-sm-9
+              <div class="row">
+                <div class="col-xs-8 col-sm-6">
+                  Level 2: .col-xs-8 .col-sm-6
+                </div>
+                <div class="col-xs-4 col-sm-6">
+                  Level 2: .col-xs-4 .col-sm-6
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper div3">
+        <div class="content-main">...</div>
+        <div class="content-secondary">...</div>
+    </div>
+    <h1>h1. Bootstrap heading</h1>
+    <h2>h2. Bootstrap heading</h2>
+    <h3>h3. Bootstrap heading</h3>
+    <h4>h4. Bootstrap heading</h4>
+    <h5>h5. Bootstrap heading</h5>
+    <h6>h6. Bootstrap heading</h6>
+    <p class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+        
+        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        You can use the mark tag to <mark>highlight</mark> text.
+
+        <s>This line of text is meant to be treated as no longer accurate.</s>
+        <del>This line of text is meant to be treated as deleted text.</del>
+        <ins>This line of text is meant to be treated as an addition to the document.</ins>
+
+        <p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+<p class="text-justify">Justified text.</p>
+<p class="text-nowrap">No wrap text.</p>
+
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">Capitalized text.</p>
+    </body>
+
+    <abbr title="attribute">attr</abbr>
+
+
+
+    <address>
+        <strong>Twitter, Inc.</strong><br>
+        1355 Market Street, Suite 900<br>
+        San Francisco, CA 94103<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+      </address>
+      
+      <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+    </address>
+
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+    <blockquote class="blockquote-reverse">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投票</title>
+    <style>
+    .clear:after{
+        content: '';
+        display: block;
+        clear: both;
+        width: 0;
+        height: 0;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }    
+    *{
+        margin: 0;
+        padding: 0;
+    }      
+    .oDiv{
+        width: 770px;
+        height: 1555px;
+        background: rgba(0, 0, 0,0.3);
+        margin: 0 auto;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+    .oDiv>div{
+        width: 243px;
+        height: 300px;
+        background:#fff;
+        margin: 5px;
+        float:left;
+        border: 1px solid #ff9900;
+        border-radius: 8%;
+    }
+    .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+      
+    *{
+        margin: 0;
+        padding: 0;
+    }   
+    .div1{
+        height: 145px;
+        width: 243px;
+        background: #ff9900;
+        border-top-right-radius: 9%;
+        border-top-left-radius: 9%
+    }
+    .div2{
+        height: 104px;
+        width: 243px;
+        background: #fff;
+        margin-top:3px; 
+        border-bottom-right-radius: 9%;
+        border-bottom-left-radius: 9%
+    }
+    .div3{
+      float:right;
+      width: 60px;
+      height: 80px;
+      background: #fff;
+      border-top-right-radius: 28%;
+      border-bottom-left-radius: 28%
+    }
+    .p1{
+        color: #ff9900;
+        font-size: 30px;
+        font-weight: 600;
+        /* text-align: center; */
+        margin: 18px 13px
+    }
+    .p2,.p3{
+        color: #ff9900;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .btn1{
+        padding: 10px 30px;
+        margin: 20px  70px;
+        background: #ff9900;
+        border-radius: 100%;
+        border:none;
+        color: #fff;
+    }
+    .img1{
+        width: 80px;
+        height: 100px;
+        position: relative;
+        top:20px;
+        left: 60px;
+        
+    }
+    .newDiv{
+    width: 100%;
+    height: 1000px;
+    background: rgba(0, 0, 0,0.3);
+    position: fixed;
+    top:0px;
+    display: none; 
+    }
+    .newDiv1{
+        width: 350px;
+        height: 550px;
+        background: rgba(255, 255, 255,0.8);
+        margin: 20px auto;  
+       
+    }
+    .newp{
+        font-size: 30px;
+        color: #ff9900;
+        text-align: center;
+        letter-spacing: 10px;
+        padding-top: 30px;
+        padding-left: 40px;
+    }
+    .newbtn1,.ipt,.newbtn2{
+        border: none;
+        background: #ff9900;
+        width: 80px;
+        height: 90px;
+        color: #fff;
+        font-size: 36px;
+        margin-right: 8px;
+        text-align: center;
+        margin-top: 145px;
+        /* position: relative;
+        top:145px;
+        left:53px; */
+    }
+    .newbtn1{
+        margin-left: 53px
+    }
+    .newspan{
+        color: #ff9900;
+        font-size: 28px;
+        float:right;
+        margin-right: 10px;
+    }
+    .newp2{
+        font-size: 20px;
+        color: #ff9900;
+        text-align: center;
+        padding-top: 30px;
+        padding-left: 18px;
+    }
+    .newbtn3{
+        padding: 10px 30px;
+        margin:50px  120px;
+        background: #ff9900;
+        border:none;
+        color: #fff;
+        width: 110px;
+        height: 55px;
+        border-radius: 20%
+    }
+    .p4{
+        color: #ff9900;
+        text-align: center;
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+    <!-- <img src="../../QQ/皮肤/7.jpg" alt=""> -->
+      <div class="oDiv clear">
+      </div>            
+
+
+    <script>
+    var date=[{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'../../QQ/皮肤/7.jpg',
+        num:'5票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'8票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'20票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'9票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'10票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'4票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'3票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'10票'
+    },{
+        name:'朱思敏',
+        id:'01',
+        info:'这是我的简介',
+        imgUrl:'C:/Users/Administrator/Desktop/QQ/皮肤/2.jpg',
+        num:'10票'
+    }]
+   
+    var oDiv=document.getElementsByClassName('oDiv')[0];
+    for(var i=0;i<date.length;i++){
+        var div=document.createElement('div')
+        var div1=document.createElement('div')
+        var div2=document.createElement('div')
+        var div3=document.createElement('div')
+        div1.classList='div1 clear'
+        div2.classList='div2 clear'
+        div3.classList='div3'
+        div1.appendChild(div3)
+        div.appendChild(div1)
+        div.appendChild(div2)
+        oDiv.appendChild(div)
+        var p1=document.createElement('p')
+        var p4=document.createElement('p')
+        var p2=document.createElement('p')
+        var p3=document.createElement('p')
+       
+        var btn1=document.createElement('button')
+        var img1=document.createElement('img')
+        
+        div3.appendChild(p1)
+        div2.appendChild(p4)
+        div2.appendChild(p2)
+        div2.appendChild(p3)
+        
+        div2.appendChild(btn1)
+        div1.appendChild(img1)
+
+
+        p1.classList='p1'
+        p2.classList='p2'
+        p3.classList='p3'
+        p4.classList='p4 fr'
+        btn1.classList='btn1'
+        img1.classList='img1'
+        
+        
+        p1.innerHTML=date[i].id
+        p2.innerHTML='姓名：' +date[i].name
+        p3.innerHTML='简介：' +date[i].info
+        p4.innerHTML= date[i].num
+        btn1.innerHTML='投票'
+        img1.src= date[i].imgUrl
+    }
+    var btn1=document.getElementsByClassName('btn1')//点击按钮出来新界面
+    var body=document.getElementsByTagName('body')[0]
+    var newDiv=document.createElement('div')
+        body.appendChild(newDiv)
+        newDiv.classList='newDiv'
+
+     var newDiv1=document.createElement('div') 
+         newDiv.appendChild( newDiv1)
+         newDiv1.classList='newDiv1 clear'
+
+    var newspan=document.createElement('span')
+        newDiv1.appendChild(  newspan)
+        newspan.classList=' newspan'
+        newspan.innerHTML='x'     
+
+    var newp=document.createElement('p')
+        newDiv1.appendChild( newp)
+        newp.classList='newp'
+        newp.innerHTML='请选择投票数'
+
+    var newbtn1=document.createElement('button')  
+        newDiv1.appendChild( newbtn1)
+        newbtn1.classList=' newbtn1'
+        newbtn1.innerHTML='-'
+
+    var ipt=document.createElement('input')
+        newDiv1.appendChild( ipt)
+        ipt.classList=' ipt'
+        ipt.value='1'
+
+    var newbtn2=document.createElement('button')  
+        newDiv1.appendChild( newbtn2)
+        newbtn2.classList=' newbtn2'
+        newbtn2.innerHTML='+'
+
+   var newp2=document.createElement('p')
+        newDiv1.appendChild( newp2)
+        newp2.classList='newp2'
+        newp2.innerHTML='注意： 每人每天最多投5票'
+
+    var newbtn3=document.createElement('button')  
+        newDiv1.appendChild( newbtn3)
+        newbtn3.classList=' newbtn3'
+        newbtn3.innerHTML='投票'
+
+  
+        
+    var num=0
+    for(var i=0;i<1;i++){
+        newbtn1.onclick=function(){
+
+        if(num==1) {
+        this.nextElementSibling.value=1
+        }else{
+            num=num-i
+        this.nextElementSibling.value=num
+        } 
+      
+         
+        } 
+       
+    }      
+  
+    for(var i=0;i<1;i++){
+        newbtn2.onclick=function(){
+         if(num==5) {
+            this.nextElementSibling.value=5
+        }  else{
+            num=num+i
+            this.previousElementSibling.value=num
+       
+        }
+      
+        }    
+    }      
+
+    for(var j=0;j<btn1.length;j++){
+        btn1[j].onclick=function(){        
+            newDiv.style.display='block';
+            var piao=  this.parentElement.getElementsByClassName('p4')[0]
+            console.log(parseInt(piao.innerHTML))
+            newbtn3.onclick=function(){
+                piao.innerHTML=parseInt(piao.innerHTML) +parseInt( ipt.value)+'票'
+                newDiv.style.display='none'
+            }
+              
+        }
+    } 
+    newspan.onclick=function(){
+        newDiv.style.display='none'
+    }
+    </script>
+</body>
+</html>
+
+

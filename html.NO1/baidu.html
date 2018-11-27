@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度一下，你就知道</title>
+    <style>
+        .ls{
+            list-style: none;
+        }
+        .fl{
+            float: left;
+        }
+        .colorblack{
+            color: black;
+        }
+        .colorwhite{
+            color: white;
+        }
+        .bold{
+            font-weight: 600
+        }
+        .fs13{
+            font-size: 13px;
+        }
+        .m15{
+            margin-left: 15px;
+        }
+        .pl5{
+            padding-left: 5px;
+        }
+        .pr5{
+            padding-right: 5px;
+        }
+        .clearboth::after{
+                content: " ";
+                clear: both;
+                display:block;
+                width: 0;
+                height: 0;
+        }
+        .right20{
+                 right: 20px;
+        }
+        .relative{
+            position: relative;
+        }
+        .absolute{
+            position: absolute;
+        }
+        ul li:last-child{
+            background: #38f
+        }
+        ul li{
+            line-height: 30px;
+        }
+        #bd{
+            width: 300px;
+            height:120px ;
+            position: relative;
+            top:50px;
+        }
+        .img{
+            text-align: center;
+        }
+        .search{
+            position: relative;
+            top:70px;
+        }
+        /* input{
+            position: relative;
+            top:70px;
+        }
+        botton{
+            position: relative;
+            top:70px;
+        } */
+        .search input{
+                width: 560px;
+                height:28px;
+                background-image:url(../camera_new_5606e8f.png);
+                background-repeat: no-repeat;
+                /* background-attachment:fixed; */
+                background-size: 20px 45px;                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                background-position-x: 525px;
+                background-position-y: 7px
+        }
+        .search button{
+                height: 34px;
+                width:100px;
+                padding: 0%;
+                position: relative;
+                left: -5px;
+                top: 2px;
+                background-color: #38f;
+                border: 0px;
+                font-size:15px;
+        }
+        .num1{
+             position: relative;
+             top: 200px;
+        }
+        .colorgrey{
+            color: #999999;
+        }
+        .ml25{
+            margin-left: 25px
+        }
+        #qrcode{
+            widows: 60px;
+            height: 60px;
+        }
+        .qrcode{
+            position: relative;
+            top: 200px;
+            margin: 0%;
+            padding: 0%
+        }
+        .lh{
+            line-height: 2px;
+        }
+        .fs10{
+            font-size: 10px;
+        }
+        #jgw{
+            position: relative;
+            top: 3px;
+            left: -3px;
+        }
+        #icp{
+            position: relative;
+            top: 5px;
+            left: -5px;
+        }
+        .ml5{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav relative">
+        <ul class=" right20 absolute">
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack bold fs13" href="">新闻</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack bold fs13" href="">hao123</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack bold fs13" href="">地图</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack bold fs13" href="">视频</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack bold fs13" href="">贴吧</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack bold fs13" href="">学术</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack fs13" href="">登录</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorblack fs13" href="">设置</a></li>
+            <li class="ls fl m15 pl5 pr5"><a class="colorwhite fs13" href="">更多产品</a></li>
+        </ul>
+    </div>
+    <div class="img">
+       <img id="bd" src="./bd_logo1.png" alt="">
+    </div>
+    <div class="search img">
+      <input type="">
+      <button class="colorwhite"> 百度一下</button>
+    </div>
+    <div class="qrcode img">
+        <img id="qrcode" src="../nuomi_365eabd.png" alt="">
+        <p class="lh fs10">百度</p>
+    </div>
+    <br>
+    <br>
+    <div class="num1 img ">
+        <a class="colorgrey fs13 ml25" href="">把百度设置为主页</a>
+        <a class="colorgrey fs13 ml25" href="">关于百度</a>
+        <a class="colorgrey fs13 ml25" href="">About Baidu</a>
+        <a class="colorgrey fs13 ml25" href="">百度推广</a>
+        <br>
+        <span  class="colorgrey fs13">©2018&nbsp;Baidu&nbsp;</span>
+        <a class="colorgrey fs13" href="">使用前必读&nbsp;</a>
+        <a class="colorgrey fs13 "  href="">意见反馈</a>
+        <span class="colorgrey fs13 ">京ICP证030173号&nbsp;</span>
+        <img id="icp" src="../2018-08-10_131101.png" alt="">
+        <a  class="colorgrey fs13 m15" target="_blank "  href="">京公网安备11000002000001号</a>
+        <img id="jgw" src="../2018-08-10_131030.png" alt="">
+    </div>
+</body>
+</html>

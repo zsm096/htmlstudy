@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+          .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+    .left,.right{
+        width: 500px;
+        height:476px;
+        background: #fffff9;
+        margin:10px 20px;
+        border: 1px solid #333
+    }
+    .content1{
+        width: 100%;
+        height: 67px;
+        border-bottom: 1px solid #333;
+        position: relative;
+    }
+    .content1>div{
+        padding-left: 5px;
+    }
+    .img{
+        padding-top: 5px;
+    }
+    .text{
+        position: absolute;
+        top: -13px;
+        left: 87px;
+    }
+    .center button{
+        height: 480px;
+        background: #ff9900;
+        text-align: center;
+        border:none;
+        font-size: 36px;
+        position: relative;
+        top: 8px;
+        }
+     .right>div{
+         float: left;
+         margin: 5px;
+     }   
+    </style>
+</head>
+<body>
+ <div class="clear">
+    <div class="left fl">
+            <div class="content1 clear">
+               <div class="fl img"  >
+                    <img src="../../logo.png" alt="">
+               </div>
+                <div class="fl text">
+                    <p>昵称1</p>
+                    <p>你好，在吗？</p>
+                </div>     
+            </div>
+    <div class="content1 clear">
+            <div class="fl img"  >
+                    <img src="../../logo.png" alt="">
+            </div>
+                <div class="fl text">
+                    <p>昵称2</p>
+                    <p>你好，在吗？</p>
+                </div>     
+            </div>        
+    <div class="content1 clear">
+            <div class="fl img"  >
+                    <img src="../../logo.png" alt="">
+            </div>
+                <div class="fl text">
+                    <p>昵称3</p>
+                    <p>你好，在吗？</p>
+                </div>     
+            </div>   
+    <div class="content1 clear">
+            <div class="fl img"  >
+                    <img src="../../logo.png" alt="">
+            </div>
+                <div class="fl text">
+                    <p>昵称4</p>
+                    <p>你好，在吗？</p>
+                </div>     
+            </div> 
+    <div class="content1 clear">
+            <div class="fl img"  >
+                    <img src="../../logo.png" alt="">
+            </div>
+                <div class="fl text">
+                    <p>昵称5</p>
+                    <p>你好，在吗？</p>
+                </div>     
+            </div> <div class="content1 clear">
+                <div class="fl img"  >
+                        <img src="../../logo.png" alt="">
+                </div>
+                    <div class="fl text">
+                        <p>昵称6</p>
+                        <p>你好，在吗？</p>
+                    </div>     
+                </div> <div class="content1 clear">
+                    <div class="fl img"  >
+                            <img src="../../logo.png" alt="">
+                    </div>
+                        <div class="fl text">
+                            <p>昵称7</p>
+                            <p>你好，在吗？</p>
+                        </div>     
+                    </div>       
+    </div> 
+    <div class="center fl">
+            <button>移动</button>
+    </div> 
+    <div class="right fl clear">
+
+    </div>
+ </div>
+ <script>
+  var content=document.getElementsByClassName('content1');
+  var btn=document.getElementsByTagName('button')[0];
+  var right=document.getElementsByClassName('right')[0];
+  var index=0;
+  var name='';
+  var src='';
+  
+  for(var i=0;i<content.length;i++){
+      content[i].index=i
+      content[i].onclick=function(){
+        content[index].style.background='#fff'
+        this.style.background="#ccc"
+        index=this.index;
+        src=this.firstElementChild.firstElementChild.src
+        name=this.firstElementChild.nextElementSibling.firstElementChild.innerHTML
+        // console.log(name)
+        btn.onclick=function(){
+        var newImg=document.createElement('img');
+        var nweName=document.createElement('p');
+        var Odiv=document.createElement('div')
+        newImg.src=src;
+        nweName.innerHTML=name;
+        Odiv.appendChild(newImg);
+        Odiv.appendChild(nweName);
+        right.appendChild(Odiv);
+
+    }
+      }
+  }
+  
+ </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jq封装.js"></script>
+    <link rel="stylesheet" href="图标库/css/font-awesome.css">
+    <style>
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
+    .xm-nav{
+        position: relative;
+        /* z-index: 30; */
+        min-height: 40px;
+        font-size: 12px;
+        color: #b0b0b0;
+        background: #333;
+    }
+    .xm-nav .navbar-nav > li > a{
+        color:#b0b0b0;
+        padding: 10PX 0;
+
+    }
+    .xm-nav .navbar-nav > li > a:hover{
+        color:#fff;
+       
+    }
+    .xm-nav .navbar-nav > li > a .sep{
+        color:#424242;
+        margin: 0 .25em;
+       font-size: 16px;
+    }
+    .nav-cart{
+        position: relative;
+        display: block;
+        height: 40px;
+        text-align: center;
+        background: #424242;
+        margin: 0 0 0 20px;
+        padding: 0 10px;
+    }
+    /* .nav-cart:hover{
+       background:#fff
+    } */
+    .nav-cart i{
+     font-size:16px;
+     margin: 0 8px 0 0;
+    }
+    .xm-collaspe{
+       margin: 0 50px;
+       position: relative;
+    }
+    .xm-collaspe img{
+       width: 100%;
+    }
+    .xm-collaspe .nav-black{
+        width: 200px;
+       position: absolute;
+       height: 100%;
+       background: rgba(0, 0, 0,0.6);
+       z-index:1;
+       top:0
+    }
+    .xm-collaspe .glyphicon-chevron-left{
+      left:150%
+    }
+    .row>div{
+       height: 350px;
+       background:linear-gradient(45deg,#f90,red);
+       text-align: center;
+       font-size: 30px;
+       color:#111;
+    }
+    .row{
+        padding:0 65px
+    }
+    body{
+        position: relative;
+    }
+    .floor{
+       width: 60px;
+       position: fixed;
+       top: 200px;
+       right:0px;
+       /* padding: 10px; */
+       background: #ccc;
+    }
+    /* .content{
+        width: 1219px;
+        margin: 0 auto;
+        background: #111
+    } */
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+ 
+    <nav class="navbar navbar-default xm-nav">
+       <div class="container-fluid">
+            <div class="collapse navbar-collapse clearfix" id="bs-example-navbar-collapse-1"  style="padding: 0 50px">
+                <ul class="nav navbar-nav fl">
+                    <li class=""><a href="#">小米商城 <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">MIUI <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">loT <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">云服务 <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">金融 <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">有品 <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">小爱开放品台 <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">政企服务 <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">下载app <span class="sep">|</span></a></li>
+                    <li class=""><a href="#">Select Region<span class="sep">|</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav fr">
+                        <li class=""><a href="#">登录 <span class="sep">|</span></a></li>
+                        <li class=""><a href="#">注册 <span class="sep">|</span></a></li>
+                        <li class=""><a href="#">消息通知 </a></li>
+                        <li class="nav-cart"><a href="#"><i class="fa fa-cart-arrow-down"></i>购物车<span class="cart-mini-num J_cartNum">（0）</span></a></li>
+                        <!-- <div class="btn " id="J_miniCartTrigger">
+                                <a  class="ac"  href="#" ><i class="fa fa-cart-arrow-down"></i>购物车<span class="cart-mini-num J_cartNum">（0）</span></a>
+                        </div> -->
+                       
+                </ul>
+                 
+            </div>
+       </div>
+    </nav>
+    <div class="xm-collaspe container-fluid">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+                  
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="图片/xmad_15259408612582_TGdhA.jpg" alt="...">
+                        
+                      </div>
+                      <div class="item">
+                        <img src="图片/xmad_15378467692556_lnrbU.jpg" alt="...">
+                       
+                      </div>
+                      <div class="item">
+                            <img src="图片/xmad_15390566279642_JIicR.jpg" alt="...">
+                           
+                     </div>
+                     <div class="item">
+                            <img src="图片/xmad_15396921038973_TNqyb.jpg" alt="...">
+                           
+                    </div>
+                    <div class="item">
+                            <img src="图片/xmad_15397411954648_IeShs.jpg" alt="...">
+                           
+                    </div>
+                     
+                    </div>
+                  
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+            </div>
+            <div class="nav-black">
+
+            </div>
+
+    </div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row con " id="content1">
+                <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="floor" data-spy="scroll" data-target="#navbar-example">
+            <div id="navbar-example">
+                <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li><a href="#content1">floor1</a></li>
+                        <li><a href="#content2">floor2</a></li>
+                        <li><a href="#content3">floor3</a></li>
+                        <li><a href="#content4">floor4</a></li>
+                    </ul>
+                </ul>
+            </div>
+                  
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script>
+     $('.collapse').collapse()
+     $('body').scrollspy({ target: '#navbar-example' })
+     var row=document.getElementsByClassName('row')
+        //  console.log(document.body.clientWidth)
+        for(var i=0;i<row.length;i++){
+            var col=row[i].getElementsByClassName('col-lg-2')
+         if(document.body.clientWidth<1200&&document.body.clientWidth>=992){
+                // console.log(document.body.clientWidth)
+            //    for(var j=0;j<col.length;j++){
+            //        col[j].classList.remove("col-lg-2");
+            //    }
+         }
+     }
+
+     
+    
+    
+    </script>
+</body>
+</html>

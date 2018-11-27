@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jq封装.js"></script>
+    <script>
+            document.querySelector('html').style.fontSize=document.documentElement.clientWidth/10+'px'
+    </script>
+    
+    <style>
+   
+    /* .kg-top{
+        height: 5rem;
+        background: rgb(4, 121, 199)
+    }
+     .kg-top .row{
+         height: 1.5rem;
+         padding: 0.3rem;
+         
+     }
+     .kg-top .row>div{
+        height: 0.9rem;
+        padding: 0;
+    
+        
+     }
+     .kg-top .row>div i{
+        color:#fff;
+        font-size:18px;
+     }
+     .kg-top .row>div i.glyphicon-share-alt{
+        float:right;
+     } */
+     
+     .app-kg .add{
+
+     }
+     .row>div{
+        background: #f90;
+     }
+    </style>
+</head>
+<body>
+       
+    <div class="">
+         <!-- <div class="kg-top container">
+            <div class="row">
+                <div class="col-xs-1"><i class="glyphicon glyphicon-menu-left aria-hidden="true""></i></div>
+                <div class="col-xs-1 col-xs-offset-10"><i class="glyphicon glyphicon-share-alt"></i></div>
+            </div>
+         </div>
+
+    </div> -->
+    <div id="app-kg">
+          <div class="list row"  v-for="(item,index) in list">
+            
+            <div class="col-xs-1 add">
+                {{item.add}}
+            </div>
+            <div class="col-xs-1" v-if="index==0" style="color: red">
+                {{index+1}}
+            </div>
+            <div class="col-xs-1" v-if="index==1" style="color:orangered">
+                {{index+1}}
+            </div>
+            <div class="col-xs-1" v-if="index==2" style="color: #f90">
+                {{index+1}}
+            </div>
+            <div class="col-xs-1" v-if="index>2">
+                {{index+1}}
+            </div>
+            <div class="col-xs-7">
+                <p>{{item.title}}  <span v-if="item.mv==true">MV</span></p>
+                <p>{{item.video}}</p>
+            </div>
+            <div  class="col-xs-1">
+                <span class="glyphicon glyphicon-option-horizontal"></span>
+            </div>
+          </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script>
+    var app_kg=new Vue({
+        el:"#app-kg",
+        data:{
+           list:[
+               {
+                   title:"沙漠骆驼",
+                   video:"展展与罗罗-沙漠骆驼",
+                   number:1,
+                   add:"+",
+                   mv:true
+               },
+               {
+                   title:"沙漠骆驼",
+                   video:"展展与罗罗-沙漠骆驼",
+                   number:1,
+                   add:"+",
+                   mv:true
+               },
+               {
+                   title:"沙漠骆驼",
+                   video:"展展与罗罗-沙漠骆驼",
+                   number:1,
+                   add:"+",
+                   mv:false
+               },
+               {
+                   title:"沙漠骆驼",
+                   video:"展展与罗罗-沙漠骆驼",
+                   number:1,
+                   add:"+",
+                   mv:true
+               },
+           ]
+        }
+    })
+    
+    </script>
+</body>
+</html>

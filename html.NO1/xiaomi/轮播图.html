@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .clear:after{
+        content: '';
+        display: block;
+        clear: both;
+        width: 0;
+        height: 0;
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }    
+    * {
+   margin:0;
+   padding:0;
+   list-style:none;
+   }
+   #pic{
+       position: relative;
+       width: 100%;
+   }
+   #pic img{
+       width: 500px;
+       height: 300px;
+       position: absolute;
+       left: 450px;
+       top:20px;
+       display: none;
+   }
+   ol>li{
+       width: 20px;
+       height: 20px;
+       border: 1px solid #ff9900;
+       border-radius: 50%;
+       /* background:rgba(255,153 , 0, 0.6); */
+       margin-right: 5px;
+       text-align: center;
+       color: #fff;
+
+   }
+   /* .wrap{
+       position: relative;
+   } */
+   ol{
+       position: absolute;
+       top:290px;
+       left:810px;
+   }
+   span{
+       /* width: 40px;
+       height: 60px; */
+       background: rgba(255,153 , 0, 0.6);
+       font-size: 30px;
+       color: #fff;
+       position: absolute;
+
+   }
+   .sp1{
+      
+       left:450px;
+       top: 140px;
+   }
+   .sp2{
+      
+      left:928px;
+      top: 140px;
+  }
+  #act{
+    display: block !important;
+  }
+  
+  .on{
+        background: rgba(255,153 , 0, 0.6);
+  }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+       <div class="wrap" >
+               <ul id="pic">
+                   <li><img id="act" src="../../小米图片/xmad_15336320593945_plLBP.jpg" alt=""></li>
+                   <li><img src="../../小米图片/xmad_15337192975678_kIiGP.jpg" alt=""></li>
+                   <li><img src="../../小米图片/xmad_15337239161431_iKufU.jpg" alt=""></li>
+                   <li><img src="../../小米图片/xmad_15338647997541_BeNrA.jpg" alt=""></li>
+                   <li><img src="../../小米图片/xmad_15338857534213_DaEjU.jpg" alt=""></li>
+                    <span class="sp1"><</span>
+                    <span class="sp2">></span>
+               </ul>
+               <ol id="list clear">
+                    <li class="on fl">1</li>
+                    <li class="fl">2</li>
+                    <li  class="fl">3</li>
+                    <li class="fl">4</li>
+                    <li class="fl">5</li>
+                </ol>
+              
+        </div>
+
+<script>
+    var lis=document.getElementsByTagName('ol')[0].getElementsByTagName('li')
+    var img=document.getElementsByTagName('img')
+    var sp1=document.getElementsByClassName('sp1')[0]
+    var sp2=document.getElementsByClassName('sp2')[0]
+    var wrap = document.getElementsByClassName('wrap')[0];
+    var num=0
+    console.log(img)
+    wrap.onmouseenter=function(){
+            clearInterval(timer)
+        }
+    wrap.onmouseleave=function(){
+        timer = setInterval(function(){
+            img[num].style.display='none';
+            lis[num].style.background='none'
+            num = num+1
+            if (num >= img.length) {
+                num = 0;
+            }
+            img[num].style.display='block';
+            lis[num].style.background='rgba(255,153 , 0, 0.6)';
+        },2000)
+    }
+    var timer=setInterval(function(){
+        img[num].style.display='none'      
+        lis[num].style.background='none';
+        num=num+1;
+        if(num>=img.length){
+            num=0
+        }
+        lis[num].style.background='rgba(255,153 , 0, 0.6)'
+        img[num].style.display='block'
+    },3000)
+    for(var i=0;i<lis.length;i++){
+        lis[i].index=i
+        lis[i].onclick=function(){
+        img[num].style.display='none'      
+        lis[num].style.background='none';
+        this.style.background='rgba(255,153 , 0, 0.6)'
+        img[this.index].style.display='block'
+        num=this.index;
+        }
+    }
+    sp1.onclick=function(){
+        // alert()
+        img[num].style.display='none'      
+        lis[num].style.background='none';
+       
+        if(num==0){
+            num=5
+        }
+        num=num-1;
+        lis[num].style.background='rgba(255,153 , 0, 0.6)'
+        img[num].style.display='block'
+    }
+    sp2.onclick=function(){
+        // alert()
+        img[num].style.display='none'      
+        lis[num].style.background='none';
+       
+        if(num==4){
+            num=num-5
+        }
+        num=num+1;
+        lis[num].style.background='rgba(255,153 , 0, 0.6)'
+        img[num].style.display='block'
+    }
+</script>
+
+         
+</html>

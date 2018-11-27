@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select id="pro">
+        <option>-请选择-</option>
+        
+    </select>
+    <select id="area">
+        <option>-请选择-</option>
+    </select>
+    <select id="pos">
+        <option>-请选择-</option>
+    </select>
+ <script>
+      var data={
+        '山西省':[
+            {'太原市':['小店区','迎泽区','杏花岭区','晋源区',]},
+            {'忻州市':['而分为二分区','区','杏花岭区','晋源区',]},
+            {'临汾市':['小店区','迎泽区','杏花岭区','晋源区',]},
+        ],
+        '北京市':[
+            {'北京市':['海淀区','朝阳区','丰台区',]},
+            
+        ],
+        '天津市':[
+            {'天津市':['123区','456区','789区',]},
+            
+        ],
+        '河北省':[
+            {'石家庄市':['123区','456区','789区',]},
+    
+        ],
+        '河南省':[
+            {'石家庄市':['123区','456区','789区',]},
+    
+        ]
+      }
+   
+      var pro=document.getElementById('pro')
+      var area=document.getElementById('area')
+      var pos=document.getElementById('pos')
+        for(var key in data){
+            // console.log(key)
+            var opt=document.createElement('option')
+            opt.innerHTML = key;
+            pro.appendChild(opt)
+         
+
+        }
+        pro.addEventListener('change',function(){
+            area.innerHTML='<option>-请选择-</option>'
+            var key=pro.value;
+            // console.log(data[key])
+            var arr=data[key]
+            for(var i=0;i<arr.length;i++){
+                var city=arr[i]
+            
+                for(var a in city){
+                    var opt=document.createElement('option')
+                    opt.innerHTML=a
+                    area.appendChild(opt)
+                }
+            }
+            area.addEventListener('change',function(){
+            pos.innerHTML='<option>-请选择-</option>'
+            for(var j=0;j<arr.length;j++){
+                var city=arr[j]
+                for(var a in city){
+                    if(a==area.value){
+                        var x=city[a]
+                        for(var y=0;y<x.length;y++){
+                            var opt=document.createElement('option')
+                            opt.innerHTML=x[y]
+                            pos.appendChild(opt)
+                        }
+                    }
+                }
+                
+              }
+            })
+        })
+       
+        
+    </script>
+</body>
+</html>

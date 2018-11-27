@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <style>
+        .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        p{
+            position: relative;
+            top: 0px;
+            margin: 0 20px;
+        }
+        .ml10{
+            margin: 0 0 0 10px;
+        }
+        .store{
+            border: 1px solid #333;
+            padding-bottom: 20px;
+            padding-left: 50px;
+            width: 700px;
+        }
+        .allCheck{
+            margin-bottom: 30px;
+        }
+        .goodmoney{
+            font-size: 30px;
+            position:fixed;
+            top:270px;
+            left: 840px;
+            background: #ff9900
+        }
+        .del{
+            padding:0 20px;
+            background: #ff9900;
+            position: relative;
+            top: -22px;
+        }
+      .deltop{
+        padding:0 20px;
+        background: #ff9900; 
+        margin-top: 2px;
+      }  
+    </style>
+</head>
+<body>
+   <div class="store clear">
+        <input class="allCheck"  type="checkbox">店铺
+        <span class="fr deltop">删除</span>
+        <div class="clear ">
+                <input class="fl check " type="checkbox">
+                <p class="fl">
+                        商品名称
+                </p>
+                <p class="fl">
+                    <span>￥</span>
+                    <span>28.8</span>
+                </p>
+                <div class="fl ml10">
+                    <button class="minus">-</button>
+                    <input class="num" type="text" value="1">
+                    <button class="add">+</button>
+                </div>
+                <div class="fl ml10"> 
+                    <span>￥</span>
+                    <span>28.8</span>
+                </div>
+            </div>
+            <span class="fr del">删除</span>
+            <div class="clear">
+            <input class="fl check " type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+        <div class="clear">
+            <input class="fl check" type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+   </div>
+    <br>
+    <div class="store clear">
+        <input class="allCheck"  type="checkbox">店铺
+        <span class="fr deltop">删除</span>
+        <div class="clear ">
+                <input class="fl check " type="checkbox">
+                <p class="fl">
+                        商品名称
+                </p>
+                <p class="fl">
+                    <span>￥</span>
+                    <span>28.8</span>
+                </p>
+                <div class="fl ml10">
+                    <button class="minus">-</button>
+                    <input class="num" type="text" value="1">
+                    <button class="add">+</button>
+                </div>
+                <div class="fl ml10"> 
+                    <span>￥</span>
+                    <span>28.8</span>
+                </div>
+            </div>
+            <span class="fr del">删除</span>
+            <div class="clear">
+            <input class="fl check " type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+        <div class="clear">
+            <input class="fl check" type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+   </div>
+    <br>
+    <div class="store clear">
+        <input class="allCheck"  type="checkbox">店铺
+        <span class="fr deltop">删除</span>
+        <div class="clear ">
+                <input class="fl check " type="checkbox">
+                <p class="fl">
+                        商品名称
+                </p>
+                <p class="fl">
+                    <span>￥</span>
+                    <span>28.8</span>
+                </p>
+                <div class="fl ml10">
+                    <button class="minus">-</button>
+                    <input class="num" type="text" value="1">
+                    <button class="add">+</button>
+                </div>
+                <div class="fl ml10"> 
+                    <span>￥</span>
+                    <span>28.8</span>
+                </div>
+            </div>
+            <span class="fr del">删除</span>
+            <div class="clear">
+            <input class="fl check " type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+        <div class="clear">
+            <input class="fl check" type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+   </div>
+    <br>
+    <div class="store clear">
+        <input class="allCheck"  type="checkbox">店铺
+        <span class="fr deltop">删除</span>
+        <div class="clear ">
+                <input class="fl check " type="checkbox">
+                <p class="fl">
+                        商品名称
+                </p>
+                <p class="fl">
+                    <span>￥</span>
+                    <span>28.8</span>
+                </p>
+                <div class="fl ml10">
+                    <button class="minus">-</button>
+                    <input class="num" type="text" value="1">
+                    <button class="add">+</button>
+                </div>
+                <div class="fl ml10"> 
+                    <span>￥</span>
+                    <span>28.8</span>
+                </div>
+            </div>
+            <span class="fr del">删除</span>
+            <div class="clear">
+            <input class="fl check " type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+        <div class="clear">
+            <input class="fl check" type="checkbox">
+            <p class="fl">
+                    商品名称
+            </p>
+            <p class="fl">
+                <span>￥</span>
+                <span>28.8</span>
+            </p>
+            <div class="fl ml10">
+                <button class="minus">-</button>
+                <input class="num" type="text" value="1">
+                <button class="add">+</button>
+            </div>
+            <div class="fl ml10"> 
+                <span>￥</span>
+                <span>28.8</span>
+            </div>
+        </div>
+        <span class="fr del">删除</span>
+   </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="goodmoney">
+        <span>共选</span>
+        <span class="goodNum">0</span>
+        <span>件商品</span>
+        <span>共计￥</span>
+        <span  class="total">0.00</span>
+    </div>
+
+    <script>
+    var goodNum=document.getElementsByClassName('goodNum')[0]
+    var total=document.getElementsByClassName('total')[0]
+    var check=document.getElementsByClassName('check');
+    var add = document.getElementsByClassName('add');
+   
+    for (var i=0;i<add.length;i++) {
+        add[i].onclick=function(){
+            var a1= this.parentElement.parentElement.firstElementChild;
+            this.previousElementSibling.value = parseInt(this.previousElementSibling.value) + 1;
+            this.parentElement.nextElementSibling.lastElementChild.innerHTML=parseInt( this.previousElementSibling.value)* parseFloat(this.parentElement.previousElementSibling.lastElementChild.innerHTML);
+          
+            if(a1.checked==true){  
+              
+                crea()
+           }
+        }
+    }
+    var minus = document.getElementsByClassName('minus');
+    for (var i=0;i<minus.length;i++) {
+        minus[i].onclick=function(){
+            var a1=  this.parentElement.parentElement.firstElementChild;
+           
+           if(a1.checked==true){  
+               crea()
+          }
+            if(this.nextElementSibling.value!=1){
+                this.nextElementSibling.value = parseInt(this.nextElementSibling.value) - 1;
+                this.parentElement.nextElementSibling.lastElementChild.innerHTML= parseInt( this.nextElementSibling.value)* parseFloat(this.parentElement.previousElementSibling.lastElementChild.innerHTML);
+                }else{
+                    this.nextElementSibling.value =1
+                }
+        }
+    }
+    var allCheck=document.getElementsByClassName('allCheck')//店铺
+     for(var i=0;i<allCheck.length;i++){
+         allCheck[i].onclick=function(){
+            var childCheck= this.parentElement.getElementsByClassName('check')//下面每一个多选框  
+        //   console.log(childCheck)
+           if(this.checked==true){    
+                for(var j=0;j<childCheck.length;j++){
+                    childCheck[j].checked=true;
+                    crea()
+          }
+            }else{
+                for(var j=0;j<childCheck.length;j++){
+                    childCheck[j].checked=false;
+                    crea()
+          }
+            }
+         }
+     }
+       
+        
+        for(var y=0;y<check.length;y++){
+            check[y].onclick=function(){
+                crea()
+            }
+        }    
+        function crea(){
+            var  n1= parseFloat(goodNum.innerHTML)
+            var  n2=parseFloat(total.innerHTML)
+                n1=0;
+                n2=0;
+                for(var x=0;x<check.length;x++){
+                    if(check[x].checked==true){
+                        var parent=check[x].parentNode;
+                        n1=n1+parseFloat(parent.getElementsByClassName('num')[0].value);
+                        n2=n2+parseFloat(parent.lastElementChild.lastElementChild.innerHTML);
+                        console.log(n2)
+                        console.log(parseFloat(parent.lastElementChild.lastElementChild.innerHTML))
+                    }
+                }
+                goodNum.innerHTML=n1
+                total.innerHTML=n2
+      }
+    //   删除整个
+     var  deltop=document.getElementsByClassName(' deltop')
+     for(var i=0;i<deltop.length;i++){
+        deltop[i].onclick=function(){
+        //   console.log( this.parentElement)
+          this.parentElement.remove(this)
+          crea()
+        }
+     }
+     //删除单个
+    
+        var store=document.getElementsByClassName('store');
+        //   console.log(store)
+        for(var i=0;i<store.length;i++){
+            var  del=store[i].getElementsByClassName('del');
+              for(var j=0;j<del.length;j++){
+                  del[j].onclick=function(){
+                      alert('确定要删除此商品吗？')
+                     this.previousElementSibling.remove( this.parentElement) 
+                     this.remove( this.parentElement) 
+                     crea()
+                    
+                  }
+              }
+        }
+        
+    </script>
+   
+       
+</body>
+</html>

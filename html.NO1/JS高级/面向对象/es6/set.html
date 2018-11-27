@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //set:它类似于数组，但是成员的值都是唯一的，没有重复的值。Set本身是一个构造函数，用来生成Set数据结构。
+    /*
+    Set结构的实例有以下属性。
+
+    Set.prototype.constructor：构造函数，默认就是Set函数。
+    Set.prototype.size：返回Set实例的成员总数。
+    Set实例的方法分为两大类：操作方法（用于操作数据）和遍历方法（用于遍历成员）。下面先介绍四个操作方法。
+
+    add(value)：添加某个值，返回Set结构本身(只能添加一个值)。
+    delete(value)：删除某个值，返回一个布尔值，表示删除是否成功(只能删除一个值)。
+    has(value)：返回一个布尔值，表示该值是否为Set的成员。
+    clear()：清除所有成员，没有返回值。
+    */
+    arr=[1,2,2,3,4,5,5]
+    var s=new Set(arr)
+    console.log(s.size)
+    console.log(s.constructor)
+    s.add(9)
+    console.log(s)
+    s.delete(2)
+    console.log(s)
+    console.log( s.has(5))
+    s.clear()
+    console.log(s)
+
+
+    //Map :本质上是键值对的集合（Hash结构），但是传统上只能用字符串当作键。这给它的使用带来了很大的限制。(可以是任何类型)
+    
+    var m = new Map();
+    var o = {p: 'Hello World'};
+
+    m.set(o, 'content') //添加成员
+    console.log(m.size)
+    console.log( m.get(o)) // "content"
+    m.has(o) // true
+    m.delete(o) // true
+    console.log(m)
+    m.has(o) // false
+
+
+
+    var map = new Map([
+        ['name', '张三'],
+        ['title', 'Author']
+    ]);
+
+    map.size // 2
+    map.has('name') // true
+    map.get('name') // "张三"
+    map.has('title') // true
+    map.get('title') // "Author"
+    </script>
+</body>
+</html>

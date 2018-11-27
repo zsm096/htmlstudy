@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 不管在什么设备上都是正常比例 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+   
+    document.querySelector('html').style.fontSize=document.documentElement.ClientWidth/10+'px'
+    </script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        font-size: 50px;
+    }
+    p{
+        width: 2em;
+        height: 2em;
+        background: #f00;
+        float: left;
+   
+    }
+
+    .odiv{
+        width: 10rem;
+        height: 3rem;
+        background: #ccc;
+        
+    }
+   
+    </style>
+</head>
+<body>
+    <!-- 1em  父元素的字体大小 -->
+     <!-- 1rem  HTML的字体大小-->
+
+     <div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+     </div>
+
+  
+</body>
+</html>

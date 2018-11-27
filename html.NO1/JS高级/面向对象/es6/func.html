@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*箭头函数的正确使用方式
+        1、如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分
+        2、如果箭头函数的代码块部分多于一条语句，就要使用大括号将他们括起来，并且使用return语句返回
+        3、如果箭头函数直接返回一个对象，必须在对象外面加上括号，否则会报错（因为大括号被解释为代码块）
+        4、如果箭头函数只有一行语句，且不需要返回值，可以使用下面的方法（前面加void），就不用写大括号了。*/
+    function fun(){
+        return console.log(2)
+    }
+    // var fun1=()=>{
+    //     return console.log(2)
+    // }
+    var fun1=()=>console.log(2)
+    fun1()
+   
+    var f = a => 2;
+    // console.log( f())
+
+    document.onclick = ()=>void alert(0);
+    /*使用箭头函数需要注意的点：
+    1、函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+    2、不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误
+    3、不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以使用rest参数代替4、不可以使用yield命令，因此箭头函数不能用作Generator函数
+    特别注意：this对象的指向是可变的，但是在箭头函数中，它是固定的。*/
+    //箭头函数中的this:定义的上下文环境；上一层函数的this---->
+    //普通函数中的this：执行上下文环境
+    var obj1={
+        name:'xiaoming',
+        //obj--->this--->window
+        sayName:()=>{
+            return console.log(this)
+        }
+    }
+    // obj1.sayName()//window
+
+     var obj2={
+        name:'xiaoming',
+        sayName:function (){
+            var a=()=>{
+                console.log(this)
+            }
+            a()
+        }
+    }
+    obj2.sayName()//obj
+    var fn = obj2.sayName
+    fn()//window
+
+    var obj3={
+        name:'xiaoming',
+        //obj--->this--->window
+        sayName:function (){
+            //sayName--->this--->obj
+            return ()=>{
+                console.log(this)
+            }
+           
+        }
+    }
+    // obj3.sayName()()//xiaomiang
+    // var fn = obj3.sayName
+    // fn()()//window
+   
+    // var a='n';
+    // function A(){
+    //    this.a='N'
+    //    this.sayA=function(){
+    //        console.log(this.a)
+    //    }
+    // }
+    // var x=new A()
+    // x.aa='111'
+    // x.sayA()//x
+
+    //  function B(){
+    //    this.b='N'
+    //    //this---->A()
+    //    this.sayB=()=>{
+    //        console.log(this.b)
+    //    }
+    // }
+    // var x=new B()
+    // x.aa='222'
+    // x.sayB()//N
+    </script>
+</body>
+</html>

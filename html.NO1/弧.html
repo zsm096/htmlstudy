@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <canvas width="500px" height="400px">
+        这是一个canvas标签
+    </canvas>
+    <script>
+      var canvas=document.getElementsByTagName('canvas')[0]
+      var ctx=canvas.getContext('2d');
+    ctx.beginPath()
+    ctx.arc(250,200,100,0,2*Math.PI,false)
+    ctx.stroke()
+
+    ctx.beginPath()
+    ctx.arc(250,230,50,0,Math.PI,false)
+  
+    ctx.closePath()
+    ctx.stroke()
+
+     ctx.beginPath()
+     ctx.arc(200,180,30,5*Math.PI/4,7*Math.PI/4,false)
+     ctx.stroke()
+     ctx.beginPath()
+     ctx.arc(300,180,30,5*Math.PI/4,7*Math.PI/4,false)
+     ctx.stroke()
+
+     ctx.beginPath()
+     ctx.moveTo(215,230)
+     ctx.lineTo(215,265)
+     ctx.stroke()
+     ctx.beginPath()
+     ctx.moveTo(235,230)
+     ctx.lineTo(235,276)
+     ctx.stroke()
+     ctx.beginPath()
+     ctx.moveTo(255,230)
+     ctx.lineTo(255,280)
+     ctx.stroke()
+     ctx.moveTo(275,230)
+     ctx.lineTo(275,275)
+     ctx.stroke()
+     ctx.beginPath()
+     ctx.moveTo(295,230)
+     ctx.lineTo(295,256)
+     ctx.stroke()
+  
+
+    
+    </script>
+</body>
+</html>

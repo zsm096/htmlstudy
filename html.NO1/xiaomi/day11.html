@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>你喜欢吃什么水果？</p>
+        <ol class="list1">
+            <li class="li1">苹果</li>
+            <li class="li1">西瓜</li>
+        </ol>
+        <input class="num1" type="text" value="">
+    </div>
+    <div>
+        <p>你喜欢看什么电视剧？</p>
+        <ol class="list2">
+            <li class="li2">延禧攻略</li>
+            <li class="li2">爱情公寓</li>
+        </ol>
+        <input class="num2" type="text" value="">
+        <button>确定</button>
+    </div>
+    <script>
+    //   var ol=document.getElementsByTagName('ol')[0];
+    //   var btn=document.getElementsByTagName('button')[0];
+    //   var ipt=document.getElementsByTagName('input')[0];
+    //   btn.onclick=function(){
+    //     var newli=document.createElement('li');
+    //     newli.innerHTML=ipt.value;
+    //     ol.appendChild(newli);
+    //     ipt.value='';
+    //   }
+
+
+
+// var ol=document.getElementsByTagName('ol')[0];
+//   var btn=document.getElementsByTagName('button')[0];
+//   var ipt=document.getElementsByTagName('input')[0];
+//   var li=document.getElementsByTagName('li');
+//   btn.onclick=function(){
+//     if(ipt.value==''){
+//         ipt.value="不得为空";
+//          }
+//     else{
+//         for(var i=0;i<li.length;i++){
+//                  if(li[i].innerHTML==ipt.value){
+//                    ipt.value="不得重复";
+//                     break; 
+//                  }
+//                  else{
+//                      if(i==li.length-1){
+//                         var newli=document.createElement('li');
+//                         newli.innerHTML=ipt.value;
+//                         ol.appendChild(newli);
+//                         ipt.value=''; 
+//                         break; 
+//                      }
+//                  }
+//         }
+//     }
+//   }
+var list1=document.getElementsByClassName('list1')[0];
+var list2=document.getElementsByClassName('list2')[0];
+var btn=document.getElementsByTagName('button')[0];
+var num1=document.getElementsByClassName('num1')[0];
+var num2=document.getElementsByClassName('num2')[0];
+var li1=document.getElementsByClassName('li1');
+var li2=document.getElementsByClassName('li2');
+var a,i
+li1[i].innerHTML=function(){
+    a=true
+}
+li2[i].innerHTML=function(){
+    a=false
+}
+btn.onclick=function(){
+    if(num1.value||num2.value==''){
+        num2.value="不得为空";
+         }
+         else{
+            for(i=0;i<li.length;i++){
+              if(num2.value==list2[i].innerHTML){
+                var newli=document.createElement('li');
+                        newli.innerHTML=num2.value;
+                        list1.appendChild(newli);
+                        num2.value=''; 
+                        break; 
+              }   
+         }
+    }
+}
+    </script>
+</body>
+</html>

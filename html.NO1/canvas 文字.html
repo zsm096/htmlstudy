@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id="lamp" src="xiaomi/图片/153620504604129587.jpg" alt="">
+    <canvas width="1000px" height="2000px">
+        这是一个canvas标签
+    </canvas>
+    <script>
+        var canvas=document.getElementsByTagName('canvas')[0]
+        var ctx=canvas.getContext('2d');
+        // beginPath()
+        var txt="Hello Canvas"
+        ctx.strokeStyle="#f90"
+        ctx.lineWidth=2
+        ctx.fillStyle='#ff0'
+        ctx.font='bold 40px "微软雅黑"'
+        ctx.textAlign="middle"
+        ctx.textBaseline='bottom'
+        ctx.fillText("hello canvas",50,50)
+        ctx.font="bold 60px '微软雅黑'"
+        ctx.strokeText(txt,100,200)
+       
+       var a= ctx.measureText(txt).width 
+       ctx.strokeText(a,0,400)
+       ctx.closePath()
+        // console.log( ctx.measureText(txt).lineWidth )
+        ctx.beginPath()
+        ctx.strokeStyle='#0f0'
+        ctx.save()
+        ctx.rect(0,400,400,300)
+        // ctx.strokeRect='#ff9900'
+        var gradl=ctx.createLinearGradient(0,400,300,500)
+        gradl.addColorStop(0,'#f0f')
+        ctx.restore()
+        gradl.addColorStop(1,'#00f')
+        ctx.fillStyle=gradl
+        ctx.fill()
+
+        //镜像渐变
+        ctx.beginPath()
+        // ctx.strokeStyle="#f90"
+        // fillStyle='#f60'
+        ctx.arc(700,400,200,0,2*Math.PI,false)
+        var gradradil=ctx.createRadialGradient(700,400,100,700,400,200)
+        gradradil.addColorStop(0,'#ff0')
+        gradradil.addColorStop(1,'#0f0')
+        ctx.fillStyle=gradradil
+        ctx.fill()
+        
+
+        // ctx.beginPath()
+        // function draw(direction)
+        // {
+       
+        // var img1=document.getElementById("lamp")
+        // var pat=ctx.createPattern(img1,direction);
+        // ctx.rect(0,700,150,100);
+        // ctx.fillStyle=pat;
+        // ctx.fill();
+        // }
+
+
+        ctx.beginPath()
+        var img=new Image()
+        img.src='xiaomi/图片/153620504604129587.jpg'
+        img.onload=function(){
+       
+        ctx.drawImage(img,0,900,400,100)
+
+       }
+
+//裁切图片
+      ctx.beginPath()
+        var img=new Image()
+        img.src='xiaomi/图片/153620504604129587.jpg'
+        img.onload=function(){
+       
+        ctx.drawImage(img,50,50,100,100,0,1100,200,100)
+       }
+
+
+
+    </script>  
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jq封装.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        body{
+            background: rgba(0, 0, 0, 0.2)
+        }
+   nav.navbar{
+    min-height: 50px;
+   
+    background: rgba(47,47,47,0.98);
+   }
+   .to-do-list .navbar-brand{
+       color: #fff;
+       font-size: 24px
+   }
+   .to-do-list .form-control{
+       height: 25px;
+       width: 300px;
+       margin: 8px 0 0 100px;
+      
+   }
+   .to-do-list .submit{
+    height: 25px;
+    padding: 0 5px;
+    margin: 8px 0 0 20px;
+   }
+   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 250px;
+    margin-top: 5px;
+    }
+    h3{
+        font-weight: 600;
+        color:#111;
+        margin-left: 280px;
+    }
+    .doing{
+        width: 600px;
+        background: #fff;
+        font-size: 16px;
+        padding: 7px 0;
+        margin-left: 280px;
+        margin-bottom: 10px;
+        border-left: 5px solid #629A9C;
+        border-radius: 3px;
+    }
+    .doing input{
+       width: 20px;
+       height: 20px;
+       margin: 0 10px 0 20px;
+    }
+    .doing .color-blue{
+     width: 10px;
+     height: 100%;
+    }
+    .doing i{
+     float:right;
+     margin: 5px 20px 0 0;
+    }
+  .complete{
+      opacity: 0.7;
+  }
+    </style>
+</head>
+<body>
+  
+    <div class="to-do-list" id="app">
+        <nav class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">ToDoList</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                    <input type="text" class="form-control" placeholder="添加ToDo" v-model="value" v-on:change="add()">
+                    </div>
+                    <button type="submit" class="btn btn-default submit ">Submit</button>
+                </form>
+            
+                </div>
+            </div>
+        </nav>
+        <div class="content"> 
+             <h3>正在进行<span>0</span></h3>
+            
+                  
+            <div class="doing row" v-for="(item,index) in doinglist">
+                
+                <input type="checkbox" name="" id="" class="col-lg-1" @click=" addfish(index)"  :checked="false">
+                <div class="col-lg-9 text"> {{item}}</div>
+                <i class="glyphicon glyphicon-record " @click="deldoing(index)"></i>
+            </div>
+           
+             <h3>已经完成 <span>0</span></h3>
+
+             <div class="doing row complete" v-for="(item,index) in checkedNames">
+                    <input type="checkbox" name="" id="" class="col-lg-1"  @click=" backdoing(index)" :checked="true">
+                    <div class="col-lg-9 text"> {{item}}</div>
+                    <i class="glyphicon glyphicon-record " @click="deladdfish(index)"></i>
+             </div>
+             
+        </div>
+              
+    </div>
+    
+<script>
+    var app=new Vue({
+        el:'#app',
+        data:{
+            value:'',
+            doinglist:[],
+            finishedlist:[],
+            checkedNames: [],
+            checked:"",
+            boo:true,
+        },
+        methods:{
+            add(){
+                this.doinglist.unshift(this.value)
+                this.value=""    
+            },
+            deldoing(idx){
+                console.log(idx)
+                this.doinglist.splice(idx,1)
+            },
+            addfish(idx){
+                // this.checked="checked"
+                this.checkedNames.unshift( this.doinglist[idx])
+                this.doinglist.splice(idx,1)
+                
+            },
+            deladdfish(idx){
+                this.checkedNames.splice(idx, 1)
+            },
+            backdoing(idx){
+                this.doinglist.unshift(  this.checkedNames[idx])
+                this.checkedNames.splice(idx, 1)
+            },
+            
+        }
+        
+    })
+
+</script>
+</body>
+</html>

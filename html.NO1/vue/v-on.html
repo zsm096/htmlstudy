@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{num}}</p>
+        <button v-on:click="num += 1">+</button>
+        <button v-on:click="fun">fun</button>
+        <button v-on:click="fun2">fun2</button>
+        <button v-on:click="fun3">fun3</button>
+
+    </div>
+    <script>
+       var app=new Vue({
+           el:"#app",
+           data:{
+               num:1
+           },
+           methods:{
+              fun:() =>{
+                this.app.num+=1
+              },
+              fun2:function(){
+               this.num+=1
+              },
+              fun3(){
+                this.num+=1
+              }
+                
+           
+           }
+       })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .divImg{
+        position: fixed;
+        z-index: 10;top:50%;
+        left: 50%;
+        margin-top: -200px;
+        margin-left: -200px;
+    }
+    #close{
+        position: absolute;
+        left: 10px;
+        top: 5px;
+    }
+    body{
+        background-color:pink;
+    }
+    div{
+        position:absolute;
+    }
+    </style>
+</head>
+<body>
+    <div id="divImg">
+   
+        <img src="../../小米图片/xmad_15331255209134_dkLzv.jpg" width="50%" height="50%">
+        <span id="close">关闭</span>
+    </div>
+    <div class="mask">
+    </div>
+</body>
+<script>
+    //获取图片div对象
+    var img1=document.getElementById("divImg");
+    
+    //设置div起始点的坐标(0,0）左上角坐标
+    var x=0,y=0;
+    
+    
+    //右下边求出图片起始点最大X和Y的坐标值
+    var w=window.screen.availWidth,h=window.screen.availHeight;
+    
+    function floatimg(){
+    //随机产生坐标x和坐标Y的值（都是从零到起始点最大X和Y的坐标值）
+    x=Math.round(Math.random()*(w));
+    y=Math.round(Math.random()*(h));
+    
+    //alert(x+","+y);
+    img1.style.left=x+"px";
+    img1.style.top=y+"px";
+    setTimeout("floatimg()",1000);
+    }
+    floatimg();
+
+    var mask = document.getElementById('close');
+    var img = document.getElementsByTagName('img')[0];
+    mask.onclick=function(){
+        img.style.display = "none";
+        this.style.display = "none";
+    }
+</script>
+</html>

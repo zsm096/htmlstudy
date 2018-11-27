@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jq封装.js"></script>
+    <style>
+    .oDiv{
+        position: relative;
+        overflow: scroll;
+    }
+    #red,#green,#blue,#yellow{
+        height: 500px;
+    }
+    #red{
+
+        background: red
+    }
+    #green{
+
+    background: green
+    }
+    #blue{
+
+    background: blue
+    }
+    #yellow{
+
+    background: yellow
+    }
+    #navbar-example{
+        width: 100px;
+       
+        position: fixed;
+        top: 200px;
+        left:300px;
+        padding: 10px;
+        background: #fff;
+    }
+    a{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+        <div class="oDiv container " data-spy="scroll" data-target="#navbar-example">
+               
+                <div id="navbar-example">
+                  <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li><a href="#red">red</a></li>
+                        <li><a href="#green">green</a></li>
+                        <li><a href="#blue">blue</a></li>
+                        <li><a href="#yellow">yellow</a></li>
+                  </ul>
+                </div>
+
+
+                <div id="red"></div>
+                <div id="green"></div> 
+                <div id="blue"></div> 
+                <div id="yellow"></div>
+                
+        </div>
+</body>
+<script src="js/bootstrap.js"></script>
+<script>
+
+    $('body').scrollspy({ target: '#navbar-example' })
+</script>
+</html>

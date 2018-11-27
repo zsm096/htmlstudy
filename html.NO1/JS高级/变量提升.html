@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 10px;
+        height: 10px;
+        background:red;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div id="status"></div>
+    <script>
+    // console.log(c)//自动把变量提升到script的最前面
+    // var c=function(){
+
+    // }
+    // console.log(c)
+    
+    
+    </script>
+    <script>
+    // function a(){
+    //     var div=document.getElementById('status')
+    //     div.style.width=parseInt(div.clientWidth+5)+'px'
+    //     if(parseInt(div.style.width)<=800){
+    //         requestAnimationFrame(a)
+    //     }
+    // }
+    // requestAnimationFrame(a)
+    // setInterval(function(){
+    //     var div=document.getElementById('status')
+    //     div.style.width=parseInt(div.clientWidth+5)+'px'
+
+    //     if(parseInt(div.style.width)>=800){
+    //      div.style.width=800+'px'
+          
+    //     } 
+    //  },100)
+  
+
+  //判断回文
+//   var a,b,c,d,i;
+//         // var num = 98765;
+//         // console.log(num%10)
+//         // console.log(parseInt(num/10)%10)
+//         // console.log(parseInt(num/1000)%10)
+//         // console.log(parseInt(num/10000))
+//             for( i=10000;i<=99999;i++){
+//                    a=i%10; // 个位数 
+//                    b=parseInt(i/10)%10 ;
+//                    c=parseInt(i/1000)%10 ;
+//                    d=parseInt(i/10000) ;
+//                    if(a==d&&b==c){
+//                     document.write('<br/>'+i) ;
+//                    }
+                   
+//              }
+
+// 一个字符串出现最多的字母
+
+//   var obj={}
+//     var str='avasavasvvagdavssaggggsav'
+//     var arr=str.split('')
+//         for(var i=0;i<arr.length;i++){
+//             if(obj[arr[i]]){
+//                 obj[arr[i]]++
+//             }
+//             else{
+//                 obj[arr[i]]=1
+//             }
+//         }
+        
+//         var max=0,code;
+
+//         for(var key in obj){
+
+//             if(obj[key]>max){
+
+//                 max=obj[key];
+//                 code=key
+//             }
+//         }
+//     console.log(max) 
+//     console.log(code)
+
+//     var obj={
+//         name:'a',
+//         sayname:function(){
+//             console.log(this.sayname)
+//         }
+//     }
+//     function x(){
+//         var b=1
+//         console.log(this.b)//undefined
+//     }
+
+//     　function test(){
+
+// 　　　　alert(this.x);
+
+// 　　}
+
+// 　var o = {
+//     x:1,
+//     m:function test(){
+
+// 　　　　alert(this.x);
+
+// 　　}
+//   }
+
+// 　　o.m(); // 1
+
+// function fun(n,o){
+// console.log(o)
+// return{
+//     fun:function(m){
+//         return fun(m,n)
+//     }
+  
+// }
+// }
+// // var a=fun(0);//undefined
+// // a.fun(1)//0
+// // a.fun(2)//0
+// // a.fun(3)//0
+// var b=fun(0).fun(1).fun(2).fun(3)
+// var c=fun(0).fun(1);
+// c.fun(2)
+// c.fun(3)
+
+// var name='caibaojian.com',
+//     person={
+//         name:'kang',
+//         getname:function(){
+//             return function(){
+//                 return this.name
+//             }
+//         }
+//     }
+
+
+// for (var i = 1; i <= 5; i++) {
+
+// (function(i){
+
+//     setTimeout( function timer() {
+
+//           console.log(i);
+
+//       },  1000 );
+
+// })(i);
+
+// }
+
+// function Foo(){
+//     this.name='xiaomiang'
+//     this.year='2018'
+//     console.log(this)//Foo{ this.name='xiaomiang',this.year='2018'}
+// }
+// var f1=new Foo()
+// console.log(f1.name)//xiaoming
+// console.log(f1.year)//2018
+
+function a(){
+    var m=3;
+    function b(){
+        console.log(m);
+    };
+    function c(){
+        console.log('string');
+    };
+    return b;
+}
+    var result=a();
+    result();//3
+
+    </script>
+    
+</body>
+</html>

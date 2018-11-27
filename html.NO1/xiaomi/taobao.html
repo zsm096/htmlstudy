@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝</title>
+</head>
+<style>
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ a{
+    text-decoration: none;
+ }
+ .clear::after{
+                content: " ";
+                clear: both;
+                display:block;
+                width: 0;
+                height: 0;
+        }
+ body{
+     background: #f4f4f4;
+ }
+ .content1{
+     background: #fff;
+     width: 590px;
+     height: 658px;
+     position: relative;
+     display:block;
+     margin-left: 80px;
+     margin-top: 8px;
+ }
+
+.nicegoods img{
+    width: 74px;
+    height: 24px;
+    margin-right: 5px;
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+.qrcode img{
+    width: 16px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+    left: 105px;
+}
+.num1{
+    line-height: 24px;
+    height: 24px;
+    color: #999;
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 130px;
+}
+.num2{
+   float: right;
+   line-height: 24px;
+    height: 24px;
+    color: #999;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 18px;
+    position: relative;
+    top: 20px;
+}
+.picture{
+    position: relative;
+}
+.picture1{
+    background: #ededed;
+    width: 181px;
+    height:181px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 65px;
+    left:15px;
+}
+.picture2{
+    background: #ededed;
+    width:181px;
+    height:181px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 65px;
+    left:204.5px;
+}
+.picture3{
+    background: #ededed;
+    width:181px;
+    height:181px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 65px;
+    left:394px;
+}
+.picture4{
+    background: #ededed;
+    width:181px;
+    height:181px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 373px;
+    left:15px;
+}
+.picture5{
+    background: #ededed;
+    width:181px;
+    height:181px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:373px;
+    left:204.5px;
+}
+.picture6{
+    background: #ededed;
+    width:181px;
+    height:181px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:373px;
+    left:394px;
+}
+/* .picture>div img{
+    width: 181px;
+    height: 148px;
+} */
+.content2{
+     background: #fff;
+     width: 590px;
+     height: 658px;
+     float: right;
+     position: relative;
+     top: -666px;
+     display:block;
+     margin-right: 80px;
+     margin-top: 8px;
+     }
+    .picture a p{
+        margin-top: 5px;
+        font-size: 16px;
+        height: 28px;
+        overflow: hidden;
+        line-height: 28px;
+        font-weight: normal;
+        color: #3c3c3c;
+    }
+    .picture a p:hover{
+        color: orangered
+    }
+    .picture a span{
+        line-height: 24px;
+        color: #999;
+        font-size: 14px;
+        overflow: hidden;
+        height: 24px;
+    }
+    .smile{
+        width: 16px;
+        height: 22px;
+        margin-right: 4px;
+    }
+    #smile{
+        line-height: 22px;
+        height: 22px;
+        margin-top: 12px;
+        color: #35b1ff;
+        padding-left: 5px;
+        font-family: iconfont!important;
+        font-size: 16px;
+        font-style: normal;
+        display: inline-block;
+    }
+    .iconfont{
+        width: 14px;
+        height: 22px;
+        margin-top: 4px;
+        margin-right: 4px;
+    }
+    .head{
+        width: 22px;
+        height: 22px;
+        position: relative;
+        top:10px;
+    }
+    /* .text{
+        font-size: 18px;
+    } */
+    .text:hover{
+              color: darkorange;
+              
+    }
+    .move:hover{
+             background: #dddcdc;
+    }
+</style>
+<style>
+     .fl{
+         float:left;
+     }
+     .fr{
+         float: right;
+     }
+     .height768{
+         height: 768px;
+     }
+     .home{
+     width: 590px;
+     height: 658px;
+     position: relative;
+     display:block;
+     margin-left: 80px;
+     margin-top: 8px;
+ }
+    .taobao2{
+        width:100%;
+        height: 768px;
+        float: left;
+        position: relative;
+        top: -664px;
+    }
+    .background-white{
+        background:#fff
+    }
+    .home-top p{
+        width:458px;
+        height:48px;
+        color: #28ABFF;
+        position: relative;
+        padding-left: 32px;
+        margin-top: 5px;
+        line-height: 48px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .home-top div{
+        position: absolute;
+        width: 4px;
+        height: 16px;
+        top: 18px;
+        left: 20px;
+        background: #28ABFF
+
+    }
+    .home1{
+        padding: 19px;
+        border:1px solid #f4f4f4;
+        width: 254px;
+        height: 317px;
+        position: relative;  
+    }
+    .home2>div{
+        width: 292px;
+        height: 110px;
+        border:1px solid #f4f4f4;
+        position: relative;
+        top:357px; 
+        left: -294px;
+        displock:block;   
+    }
+    .home2 .text{
+        padding-top: 35px;
+        float: left;
+        padding-left: 40px;
+        width: 122px;
+    }
+    .home2 p{
+        font-size: 18px;
+        color: #333;
+        line-height: 30px;
+        font-weight: normal;
+    }
+    .home2 span{
+        color: #999;
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .home2 img{
+        widows: 100px;
+        height: 100px;
+        position: relative;
+        top:5px;
+    }
+    .home3{
+        position: relative;
+    }
+    .home3{
+        width:296px;
+        height: 693px;
+        position: absolute;
+        top:48px; 
+        left:294px;
+    }
+    .home3>div{
+        width:294px;
+        height: 229px;
+        border:1px solid #f4f4f4;
+    }
+    .home .text1{
+        font-size: 18px;
+        color: #333;
+        font-weight: normal;
+        line-height: 32px;
+        position: relative;
+        top:30px;
+        left: 30px;
+    }
+    .home .text2{
+        color: #999;
+        font-size: 12px;
+        font-weight: normal;
+        display: block;
+        line-height: 20px;
+        position: relative;
+        top:5px;
+        left: 105px;
+    }
+    .home3 img{
+        width: 120px;
+        height: 120px;
+        position:relative;
+        top: 33px;
+        left:27px;
+    }
+    .taobao2-right{
+        position: relative;
+        top: -671px;
+        left:-80px;
+    }
+    .taobao2-right .home3{
+        position: absolute;
+        top:53px;
+    }
+    #play p {
+              color:#ff5000;
+    }
+    #play div{
+                background: #ff5000;
+                position:absolute;
+                top:22px;
+}
+.border-orange:hover{
+    border:1px solid #ff5000;
+}
+    
+</style>
+     
+
+
+
+<body>
+ <!-- 有好货 -->
+   <div class="content ">
+       <div class="content1">
+            <div class="nicegoods clear">
+                <img src="../../taobao/TB1tqpnegMPMeJjy1XcXXXpppXa-148-48.png" alt="">
+        </div>
+        <div style="position: relative;" class="qrcode">
+                 <img id="qrcode" src="../../taobao/二维码.png" alt="">
+                 <span class="num1">与品质生活不期而遇</span>
+                 <span ><a class="num2" href="">换一换 </a></span>
+        </div>
+        <div class="picture">
+                <div>
+                  <a  class="picture1" href=""><img class="move" src="../../taobao/TB2GPgoksjI8KJjSsppXXXbyVXa_!!646511815-2-beehive-scenes.png_180x180xzq90.jpg_.webp" alt="">
+                    <p>super方框眼镜</p>
+                    <span>金属镶边彰显奢华贵</span>
+                    <br>
+                    <img class="smile" src="../../taobao/smile.png" alt=""><span id="smile">   2 人说好</span>
+                  </a>
+            
+                </div>
+                <div>
+                   <a  class="picture2" href=""> <img class="move" src="../../taobao/2018-08-13_221247.png" alt="">
+                    <p>Salar Maria拼色单肩斜</p>
+                   <span>精选优质牛皮制作，展现高</span>
+                   <br>
+                   <img class="smile" src="../../taobao/smile.png" alt=""><span id="smile">   7 人说好</span>
+                </a>
+                </div>
+                <div>
+                  <a class="picture3"  href="">  <img class="move" src="../../taobao/2018-08-13_221314.png" alt="">
+                    <p>BALMIAN补丁牛仔裤</p>
+                    <span>修身版型设计，贴合腿部线</span>
+                    <br>
+                    <img class="smile" src="../../taobao/smile.png" alt=""><span id="smile">   10 人说好</span>
+                </a>
+                </div>
+                <div>
+                  <a  class="picture4" href="">  <img class="move" src="../../taobao/2018-08-13_221403.png" alt="">
+                   <p>华伦天奴 系带低帮板鞋</p>
+                   <span>双重面料拼接纹理细腻柔</span>
+                   <br>
+                   <img class="smile" src="../../taobao/smile.png" alt=""><span id="smile">   8 人说好</span>
+                </a>
+                </div>
+                <div>
+                   <a  class="picture5" href=""> <img class="move" src="../../taobao/2018-08-13_221507.png" alt="">
+                    <p>GC手工牛皮乐福鞋</p>
+                    <span>鞋面双排车线拼接，为</span>
+                    <br>
+                    <img class="smile" src="../../taobao/smile.png" alt=""><span id="smile">   5 人说好</span>
+                </a>
+                </div>
+                <div>
+                  <a  class="picture6" href="">  <img class="move" src="../../taobao/2018-08-13_223332.png" alt="">
+                 <p>粉蓝衣橱 黑白印花交叠</p>
+                 <span>蝙蝠式的廓形，具有时尚</span>
+                 <br>
+                 <img class="smile" src="../../taobao/smile.png" alt=""><span id="smile">   3 人说好</span>
+                </a>
+                </div>
+       </div>
+    </div>
+    <!-- 爱逛街 -->
+    <div class="content2">
+        <div class="nicegoods clear">
+            <img src="../../taobao/TB1UNX2bSFRMKJjy0FhXXX.xpXa-112-46.png" alt="">
+    </div>
+    <div style="position: relative;" class="qrcode">
+             <span class="num1">献给聪明可爱的你</span>
+             <span><a  class="num2" href="">更多 ></a></span>
+    </div>
+    <div class="picture">
+            <div>
+              <a class="picture1"  href=""><img class="move" src="../../taobao/TB21V8dlC3PL1JjSZFxXXcBBVXa_!!452703359.jpg_180x180xzq90.jpg_.webp" alt="">
+                <img class="iconfont" src="../../taobao/引号.png" alt="">
+                <span class="text">宝宝周岁生日布置气球儿童生日派对卡通字母</span>
+                 <br>
+                <img class="head" src="../../taobao/TB2lSwItVXXXXbLXpXXXXXXXXXX_!!0-mytaobao.jpg_30x30.jpg" alt="">
+                <span>&nbsp;&nbsp;潮流女孩girl</span>
+              </a>
+            </div>
+            <div>
+              <a class="picture2"  href="">  <img class="move" src="../../taobao/TB25IeRAMaTBuNjSszfXXXgfpXa_!!2889874805-0-beehive-scenes.jpg_180x180xzq90.jpg_.webp" alt="">
+                <img class="iconfont" src="../../taobao/引号.png" alt="">
+                <span class="text">宝宝周岁生日布置气球儿童生日派对卡通字母</span>
+                 <br>
+                <img class="head" src="../../taobao/TB2lSwItVXXXXbLXpXXXXXXXXXX_!!0-mytaobao.jpg_30x30.jpg" alt="">
+                <span>&nbsp;&nbsp;潮流女孩girl</span>
+             </a>
+            </div>
+            <div>
+               <a  class="picture3" href=""> <img class="move" src="../../taobao/TB2CKtFdwmTBuNjy1XbXXaMrVXa_!!1945337153.jpg_180x180xzq90.jpg_.webp" alt="">
+                <img class="iconfont" src="../../taobao/引号.png" alt="">
+                <span class="text">宝宝周岁生日布置气球儿童生日派对卡通字母</span>
+                 <br>
+                <img class="head" src="../../taobao/TB2lSwItVXXXXbLXpXXXXXXXXXX_!!0-mytaobao.jpg_30x30.jpg" alt="">
+                <span>&nbsp;&nbsp;潮流女孩girl</span>
+              </a>
+            </div>
+            <div>
+               <a  class="picture4" href=""> <img class="move" src="../../taobao/TB2t.MgXIjI8KJjSsppXXXbyVXa_!!2888347758-0-beehive-scenes.jpg_180x180xzq90.jpg_.webp" alt="">
+                <img class="iconfont" src="../../taobao/引号.png" alt="">
+                <span class="text">宝宝周岁生日布置气球儿童生日派对卡通字母</span>
+                 <br>
+                <img class="head" src="../../taobao/TB2lSwItVXXXXbLXpXXXXXXXXXX_!!0-mytaobao.jpg_30x30.jpg" alt="">
+                <span>&nbsp;&nbsp;潮流女孩girl</span>
+            </a>
+            </div>
+            <div>
+              <a  class="picture5" href="">  <img class="move" src="../../taobao/TB2z7U9hx1YBuNjy1zcXXbNcXXa_!!163446473.jpg_180x180xzq90.jpg_.webp" alt="">
+                <img class="iconfont" src="../../taobao/引号.png" alt="">
+                <span class="text">宝宝周岁生日布置气球儿童生日派对卡通字母</span>
+                 <br>
+                <img class="head" src="../../taobao/TB2lSwItVXXXXbLXpXXXXXXXXXX_!!0-mytaobao.jpg_30x30.jpg" alt="">
+                <span>&nbsp;&nbsp;潮流女孩girl</span>
+            </a>
+            </div>
+            <div>
+                <a  class="picture6" href=""><img class="move" src="../../taobao/TB1kSfTNFXXXXbqXXXXXXXXXXXX_!!0-item_pic.jpg_180x180xzq90.jpg_.webp" alt="">
+                    <img class="iconfont" src="../../taobao/引号.png" alt="">
+                    <span class="text">宝宝周岁生日布置气球儿童生日派对卡通字母</span>
+                     <br>
+                    <img class="head" src="../../taobao/TB2lSwItVXXXXbLXpXXXXXXXXXX_!!0-mytaobao.jpg_30x30.jpg" alt="">
+                    <span>&nbsp;&nbsp;潮流女孩girl</span>
+                </a>
+            </div>
+</div>    
+</div>
+ </div>
+ <br>
+ <br>
+ <!-- 品质生活家 -->
+ <div class="taobao2 clear">
+     <div class="home clear height768 ">
+         <div class="home-top background-white">
+            <p>品质生活家</p>
+            <div>
+            </div>
+         </div>
+         <div class="home1 fl background-white border-orange">
+             <div>
+                 <img src="../../taobao/家具城.png" alt="">
+             </div>
+         </div>
+         <div class="home2 fl ">
+             <div class="background-white border-orange" >
+                <div class="text">
+                    <p>极有家</p>
+                    <span>过我想要的生活</span>
+                </div>
+                <div class="picture-left">
+                    <img src="../../taobao/极有家.webp" alt="">      
+                </div> 
+             </div>
+             <div class="background-white border-orange">
+                    <div class="text">
+                            <p>淘宝花鸟</p>
+                            <span>园艺宠物爱好者集中营</span>
+                        </div> 
+                        <div class="picture-left">
+                                <img src="../../taobao/淘宝花鸟.webp" alt="">      
+                            </div>
+             </div>
+             <div class="background-white border-orange">
+                    <div class="text">
+                            <p>聚名品</p>
+                            <span>臻选大牌尖货</span>
+                        </div> 
+                        <div class="picture-left">
+                                <img src="../../taobao/聚名品.webp" alt="">      
+                            </div>
+             </div>
+         </div>
+         <div class="home3 fr background-white clear" >
+             <div class="picture-right border-orange">
+              <span class="text1">亲宝贝</span>
+              <span class="text2">享受育儿新方法</span>
+              <img class="fl" src="../../taobao/亲宝贝.webp" alt="">
+              <img class="fl" src="../../taobao/亲宝贝2.webp" alt="">
+             </div>
+             <div  class="picture-right border-orange">
+                <span class="text1">淘宝教育</span>
+                <span class="text2">给你未来的学习体验</span>
+                <img class="fl" src="../../taobao/淘宝教育.webp" alt="">
+                <img class="fl" src="../../taobao/淘宝教育2.webp" alt="">
+             </div>
+             <div  class="picture-right border-orange">
+                <span class="text1">淘宝美食</span>
+                <span class="text2">食在任性</span>
+                <img class="fl" src="../../taobao/淘宝美食.webp" alt="">
+                <img class="fl" src="../../taobao/淘宝美食2.webp" alt="">
+             </div>
+         </div>
+     </div>
+     <div class="home clear height768 fr taobao2-right ">
+        <div id="play" class="home-top background-white">
+           <p>特色玩味控</p>
+           <div>
+           </div>
+        </div>
+        <div class="home1 fl background-white border-orange">
+            <div>
+                <img src="../../taobao/拍卖.jpg" alt="">
+            </div>
+        </div>
+        <div class="home2 fl">
+            <div class="background-white border-orange" >
+               <div class="text">
+                   <p>淘宝众筹</p>
+                   <span>脑洞创意坊</span>
+               </div>
+               <div class="picture-left">
+                   <img src="../../taobao/淘宝众筹.webp" alt="">      
+               </div> 
+            </div>
+            <div class="background-white border-orange">
+                   <div class="text">
+                           <p>中国制造</p>
+                           <span>懂得好生活</span>
+                       </div> 
+                       <div class="picture-left">
+                               <img src="../../taobao/中国制造.webp" alt="">      
+                           </div>
+            </div>
+            <div class="background-white border-orange">
+                   <div class="text">
+                           <p>阿里汽车</p>
+                           <span>冰点低价</span>
+                       </div> 
+                       <div class="picture-left">
+                               <img src="../../taobao/阿里汽车.webp" alt="">      
+                           </div>
+            </div>
+        </div>
+        <div class="home3 fr background-white clear" >
+            <div class="picture-right border-orange">
+             <span class="text1">淘宝动漫</span>
+             <span class="text2">童年经典美漫经典</span>
+             <img class="fl" src="../../taobao/淘宝动漫1.webp" alt="">
+             <img class="fl" src="../../taobao/淘宝动漫2.webp" alt="">
+            </div>
+            <div  class="picture-right border-orange">
+               <span class="text1">淘宝文创</span>
+               <span class="text2">潮流文创聚集地</span>
+               <img class="fl" src="../../taobao/淘宝文创1.webp" alt="">
+               <img class="fl" src="../../taobao/淘宝文创2.webp" alt="">
+            </div>
+            <div  class="picture-right border-orange">
+               <span class="text1">淘宝电场</span>
+               <span class="text2">科技潮玩看我</span>
+               <img class="fl" src="../../taobao/淘宝电场1.webp" alt="">
+               <img class="fl" src="../../taobao/淘宝电场2.webp" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //创建ajax对象（不兼容ie6）
+    //连接服务器(open 方法  get/post(域名)两种请求方式)
+    //发送请求
+    //接受参数/返回值
+    // var oAjax=new XMLHttpRequest();
+    // var oAjax=new ActiveXObject("Microsoft.XMLHTTP");//老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：
+    var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.open("GET","C:/Users/Administrator/Desktop/html.NO1/JS高级/json/start.json",true);
+        xmlhttp.send()
+        xmlhttp.onreadystatechange=function(){
+            console.log( xmlhttp.readyState)
+            if( xmlhttp.readyState==4&& xmlhttp.status==200){
+            document.write(JSON.parse(xmlhttp.responseText.firstName))
+        }
+     
+    }
+    
+    
+    </script>
+    <!-- <script type="text/javascript">
+        function loadXMLDoc()
+        {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+          {// code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp=new XMLHttpRequest();
+          }
+        else
+          {// code for IE6, IE5
+          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+        xmlhttp.onreadystatechange=function()
+          {
+          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            }
+          }
+         xmlhttp.open("GET","新建文本文档.txt",true);
+         xmlhttp.send();
+        } -->
+    <!-- </script> -->
+    </head>
+    <body>
+        
+        <div id="myDiv"><h2>Let AJAX change this text</h2></div>
+        <button type="button" onclick="loadXMLDoc()">通过 AJAX 改变内容</button>
+       
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jq封装.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .item img{
+        width:100%
+    }
+    .con{
+        padding: 7.5px;
+    }
+    .con>div img{
+        width: 100%;
+        height:200px;
+    }
+    .con>div{
+        padding: 7.5px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    #one{
+        font-size:20px;font-weight: 600;margin: 20px 0 5px 0
+    }
+    #two,#three,#four,#five{
+        font-size:20px;font-weight: 600;margin: 5px 0 5px 0
+    }
+</style>
+<body   data-spy="scroll" data-target="#navbar-example">
+<div class="container">
+        <nav  id="nav"  class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a style="padding: 0px" class="navbar-brand" href="#"><img style="width: 49px" src="image/logo.png" alt=""></a>
+                    </div>
+                
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">小米手机<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">红米</a></li>
+                        <li><a href="#">电视</a></li>
+                        <li><a href="#">笔记本</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新品<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">手机</a></li>
+                            <li><a href="#">路由器</a></li>
+                            <li><a href="#">智能硬件</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">服务</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">社区</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                        <!-- <input type="text" class="form-control" placeholder="Search"><button type="submit" class="btn btn-default">搜索</button> -->
+                        <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="input-group">
+                                    <input style="width: 300px" type="text" class="form-control" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                      <button style="height: 34px;line-height: 25px" class="btn btn-default" type="button">搜索</button>
+                                    </span>
+                                  </div><!-- /input-group -->
+                                </div><!-- /.col-lg-6 -->
+                              </div><!-- /.row -->
+                        </div>
+                        
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登录<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">QQ登录</a></li>
+                            <li><a href="#">微信登录</a></li>
+                            <li><a href="#">网易邮箱登录</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">其他</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">注册</a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+        </nav>
+            
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active"><img src="图片/xmad_15259408612582_TGdhA.jpg" alt="..."></div>
+                <div class="item"> <img src="图片/xmad_15378467692556_lnrbU.jpg" alt="..."></div>
+                <div class="item"> <img src="图片/xmad_15390566279642_JIicR.jpg" alt="..."></div>
+                <div class="item"> <img src="图片/xmad_15396921038973_TNqyb.jpg" alt="..."></div>
+                <div class="item"> <img src="图片/xmad_15397411954648_IeShs.jpg" alt="..."></div>
+            </div>
+            
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>     
+</div>
+<div class="container">
+        <div id="navbar-example">
+                <ul class="nav nav-pills nav-stacked" style="position:fixed;top:72px;right: 8px;z-index:9;" >
+                    <li  role="presentation" class="active"><a style="padding:10px 30px" href="#nav">导航</a></li>
+                    <li  role="presentation"><a style="padding:10px 20px" href="#one">第一层</a></li>
+                    <li  role="presentation"><a style="padding:10px 20px" href="#two">第二层</a></li>
+                    <li  role="presentation"><a style="padding:10px 20px" href="#three">第三层</a></li>
+                    <li  role="presentation"><a style="padding:10px 20px" href="#four">第四层</a></li>
+                    <li  role="presentation"><a style="padding:10px 20px" href="#five">第五层</a></li>
+                </ul>
+            </div>
+            <div id="one">第一层</div>
+
+                <div class="row con">
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                    <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                </div>
+                <div id="two">第二层</div>
+                <div class="con row">
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                </div>
+                <div id="three">第三层</div>
+                <div class="con row">
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                </div>
+                <div id="four">第四层</div>
+                <div class="con row">
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                </div>
+                <div id="five">第五层</div>
+                <div class="con row">
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                        <div class="col-md-3 col-sm-4 col-lg-2 col-xs-6"><img src="image/jp.png" alt="">达尔优游戏机械键盘</div>
+                </div>
+           
+</div>
+    
+</body>
+
+</html>

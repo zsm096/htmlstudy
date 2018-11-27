@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<style>
+    *{margin: 0;padding: 0}
+    .list{display: flex}
+    .list>div{border-bottom: 1px solid #f4f4f4}
+    .list>div:first-child{text-align: center;line-height:55px;flex:1}
+    .list>div:last-child{padding: 3px; flex:10}
+    .list>div:last-child p{padding: 3px;}
+    .list>div:last-child p:first-child{font-size: 15px}
+    .list>div:last-child p:last-child{font-size: 6px;color: #ccc;}
+    .list>div:last-child p span{font-size: 8px;color: blue;border: 1px solid blue;padding: 0px 2px}
+</style>
+<body>
+    <div id="vue">
+        <div class="list" v-for="(item,index) in list">
+            <div v-if="index==0" style="color: red">
+                {{index+1}}
+            </div>
+            <div v-if="index==1" style="color: green">
+                {{index+1}}
+            </div>
+            <div v-if="index==2" style="color: blue">
+                {{index+1}}
+            </div>
+            <div  v-if="index>2">
+                {{index+1}}
+            </div>
+            <div>
+                <p>
+                    {{item.gm}}
+                    <span v-if="item.mv==true">MV</span>
+                </p>
+                <p>
+                    {{item.gs}} - {{item.gm}}
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        var vue = new Vue({
+            el:'#vue',
+            data:{
+                r:true,
+                name:"lalalal",
+                list:[{
+                        gm:"沙漠骆驼",
+                        gs:"展展与罗罗",
+                        mv:true
+                    },{
+                        gm:"38度6",
+                        gs:"黑龙",
+                        mv:true
+                    },{
+                        gm:"流浪",
+                        gs:"半阳",
+                        mv:false
+                    },{
+                        gm:"可不可以",
+                        gs:"张子豪",
+                        mv:false
+                    },{
+                        gm:"年少有为",
+                        gs:"李荣浩",
+                        mv:true
+                    },{
+                        gm:"去年夏天",
+                        gs:"王大毛",
+                        mv:false
+                    },{
+                        gm:"最美的期待",
+                        gs:"周笔畅",
+                        mv:true
+                    }]
+            }
+        })
+    </script>
+</body>
+</html>

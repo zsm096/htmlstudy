@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            display: none
+        }
+        .show{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+       <!-- 第一题首字母大写，其他字母小写 -->
+    <!-- <script>
+    var str='TOM Alice sinal waLLY';
+    var str1=str.split(' ');
+    var newstr=[];
+    for(var i=0;i<str1.length;i++){
+      var   str2=  str1[i].toLocaleLowerCase();
+      newstr.push(str2);
+      newstr[i].substring(0,1).toUpperCase(1)+newstr[i].substring(1);
+    }
+    alert( newstr.join().replace(/,/g, " "))
+    </script> -->
+    <!-- 有十个同学的成绩，求平均数最高分和最低分 -->
+    <!-- <script>
+     var arr=[87,90,98,45,67,68,78,99,76,88]
+     var max;
+          for(var i=0;i<arr.length;i++){
+                   for(var j=0;j<arr.length;j++){
+                    if(arr[j]>arr[j+1]){
+                           max=arr[j];
+                           arr[j]=arr[j+1];
+                           arr[j+1]=max;
+                    }
+                   }
+          }
+     alert("最低分为"+arr.join().slice(0,2))
+     alert ("最高分为"+arr.join().slice(27,29))
+     var arr1=arr.join().split(',');
+    //  for(){
+
+    //  }
+     
+    </script> -->
+    <!-- <script>
+            var arr=['a',null,undefined,123,0,false,true]
+            var trueArr=[];
+            var falseArr=[];
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]){
+                    trueArr.push(arr[i])
+                }else{
+                    falseArr.push(arr[i])
+                    console.log(falseArr.splice(arr[i]))
+                }
+            }
+            // alert(trueArr);
+            // alert(falseArr);
+        
+            // console.log(falseArr.splice(arr[i]))
+    </script> -->
+    <button>推荐</button>
+    <button>军事</button>
+    <button>社会</button>
+    <div class="show">推荐</div>
+    <div >军事</div>
+    <div>社会</div>
+    <script>
+    var btns=document.getElementsByTagName('button');
+    var divs=document.getElementsByTagName('div');
+     for(var i=0;i<btns.length;i++){
+         btns[i].index=i
+         btns[i].onclick=function(){
+             for(var j=0;j<divs.length;j++){
+                   divs[j].style.display='none';
+             }
+             divs[this.index].style.display='block';
+         }
+     }
+
+    </script>
+</body>
+</html>

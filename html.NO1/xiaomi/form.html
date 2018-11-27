@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .one{
+        width: 500px;
+        height: 50px;
+        border: 2px solid #222;
+        position: relative;
+    }
+    .two{
+        width: 100px;
+        height: 50px;
+        background: #f90;
+        position: absolute;
+        top:0px;
+        left: 0px;
+    }
+    .ipt1{
+        width: 400px;
+        height: 20px;
+    }
+    ipt1img{
+        display: inline-block;
+    }
+    .divcolor{
+        width: 300px;
+        height: 300px;
+        background: #f90;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" list="dlist">
+    <datalist id="dlist">
+       <option >还好还好或</option>
+       <option >吾问无为谓无无</option>
+       <option >123456</option>
+    </datalist>
+<div class="one">
+  <div class="two">
+
+  </div>
+</div>
+<input class="ipt1" type="range" max="100" min="0" step="10" value="10">
+<img class="ipt1img" src="C:/Users/Administrator/Desktop/苏宁易购/图片/1蟹到先得.jpg" alt="">
+
+<input type="color" class="color">
+<div class="divcolor">
+
+</div>
+
+<script>
+//     var two=document.getElementsByClassName('two')[0]
+//   setInterval(function(){
+
+//     two.style.width=parseInt(two.clientWidth)+10+'px'
+//     if( two.style.width>=500+'px'){
+//         two.style.width=500+'px'
+//     }
+  
+
+
+//   },500)
+
+// var ipt1=document.getElementsByClassName('ipt1')[0];
+// var ipt1img=document.getElementsByClassName('ipt1img')[0]
+
+// ipt1.oncinput=function(){
+//   ipt1img.width=ipt1img.clientWidth/10
+// }
+var divcolor=document.getElementsByClassName('divcolor')[0];
+var color=document.getElementsByClassName('color')[0];
+divcolor.style.background=color.value
+
+
+
+
+</script>
+</body>
+</html>

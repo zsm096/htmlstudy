@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var obj={}
+    var str='avasavasvvagdavssaggggsav'
+    var arr=str.split('')
+        for(var i=0;i<arr.length;i++){
+            if(obj[arr[i]]){
+                obj[arr[i]]++
+            }
+            else{
+                obj[arr[i]]=1
+            }
+        }
+        
+        var max=0,code;
+
+        for(var key in obj){
+
+            if(obj[key]>max){
+
+                max=obj[key];
+                code=key
+            }
+        }
+    console.log(max) 
+    console.log(code)
+
+
+
+    // alert(obj.a)
+    </script>
+</body>
+</html>

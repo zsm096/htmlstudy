@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2018-08-28 11:12:34 -->
+    <p id="p"></p>
+
+    <button id="btn">10</button>
+    <script>
+        
+
+        // 00:02:00
+        // 00:01:59
+
+        // setInterval(function(){
+        //     if (parseInt(btn.innerHTML)<1) {
+        //         btn.innerHTML = '开始'
+        //     } else {
+        //         // alert()
+        //         // console.log(parseInt(btn.innerHTML) - 1)
+        //         btn.innerHTML = parseInt(btn.innerHTML) - 1
+        //     }
+        // },1000)
+
+        var seconds = 3600;
+        function countTime (seconds) {
+            var minutes = Math.floor(seconds / 60)
+            seconds %= 60
+            // console.log(seconds)
+            // seconds = seconds%60
+            seconds = Math.floor(seconds)
+            if (seconds < 10) seconds = '0' + seconds
+            if (minutes < 10) minutes = '0' + minutes
+            return `${minutes}:${seconds}`
+        }
+        setInterval(function(){
+            seconds -=1;
+            console.log(countTime(seconds))
+        },1000)
+
+
+        // console.log(str)
+        // now.getDate()
+        // now.getMonth()
+        // now.getFullYear()
+        // now.getHours()
+        // now.getMinutes()
+        // now.getSeconds()
+
+        // setInterval(function(){
+        //     var now = new Date()
+        //     var str = now.getFullYear() + '-' +  parseInt(now.getMonth()+1) + '-' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds()
+        //     p.innerHTML = str
+        // },1000)
+
+            
+
+
+
+    </script>
+</body>
+</html>

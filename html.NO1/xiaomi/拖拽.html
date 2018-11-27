@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      div{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 200px;
+          height: 200px;
+          background: #000;
+      }
+    </style>
+
+</head>
+<body>
+   <div>
+
+   </div>
+</body>
+<script>
+    var Odiv=document.getElementsByTagName('div')[0];
+    var x;
+    var y; 
+    var l;
+    var t; 
+    Odiv.onmousedown=function(e){
+        // console.log(e.clientX)
+        // console.log(e.clientY)
+        x=e.clientX-Odiv.offsetLeft;
+        y=e.clientY-Odiv.offsetTop;
+        Odiv.onmousemove=function(e){
+           
+            l = e.clientX - x
+            t = e.clientY - y
+            if (l<0){
+                    l = 0;
+                } 
+            if ((l + Odiv.clientWidth) > document.documentElement.clientWidth){
+                    l = document.documentElement.clientWidth - Odiv.clientWidth
+                }
+            if (t<0){
+                t = 0;
+            } 
+            if ((t +  Odiv.clientHeight) > document.documentElement.clientHeight){
+                t = document.documentElement.clientHeight -  Odiv.clientHeight
+            }    
+            Odiv.style.left=l+'px';
+            Odiv.style.top=t+'px';
+            Odiv.onmouseup=function(){
+                Odiv.onmousemove=null;
+            }
+        }
+    }
+    
+</script>
+</html>

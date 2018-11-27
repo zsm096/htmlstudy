@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+    div#div0{
+        margin:30px;
+        width:200px;
+        height:100px;
+        background-color:yellow;
+        /* Rotate div 
+        rotate(angle)	定义 2D 旋转，在参数中规定角度。*/
+        transform:rotate(9deg);
+        -ms-transform:rotate(9deg); /* Internet Explorer */
+        -moz-transform:rotate(9deg); /* Firefox */
+        -webkit-transform:rotate(9deg); /* Safari 和 Chrome */
+        -o-transform:rotate(9deg); /* Opera */
+        }
+
+
+    div#div1,div#div2{
+        width:100px;
+        height:75px;
+        background-color:yellow;
+        border:1px solid black;
+        }
+    div#div2
+        {
+        transform:translate(50px,100px);
+        -ms-transform:translate(50px,100px); /* IE 9 */
+        -moz-transform:translate(50px,100px); /* Firefox */
+        -webkit-transform:translate(50px,100px); /* Safari and Chrome */
+        -o-transform:translate(50px,100px); /* Opera */
+        }
+    div#div4,  div#div3{
+        width:100px;
+        height:75px;
+        background-color:yellow;
+        border:1px solid black;
+        }
+        div#div4
+        {
+        transform:rotate(30deg);
+        -ms-transform:rotate(30deg); /* IE 9 */
+        -moz-transform:rotate(30deg); /* Firefox */
+        -webkit-transform:rotate(30deg); /* Safari and Chrome */
+        -o-transform:rotate(30deg); /* Opera */
+    }
+    </style>
+    
+</head>
+<body>
+    <div id="div0">你好，在吗？</div>
+
+    <div id="div1">你好。这是一个 div1 元素。</div>
+
+    <div id="div2">你好。这是一个 div2 元素。</div>
+    <div id="div3">你好。这是一个 div3 元素。</div>
+
+    <div id="div4">你好。这是一个 div 4元素。</div>
+    
+</body>
+</html>

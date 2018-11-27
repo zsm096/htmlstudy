@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <script src="jq封装.js"></script>
+    <style>
+     button{
+         width: 50px;
+         height: 30px;
+         margin: 10px;
+         background: #f90;
+        border: none;
+        outline: none;
+     }
+     #app{
+         position: relative;
+     }
+     #app>div{
+         width: 50px;
+         height: 30px;
+         margin: 10px;
+         background: #f90;
+        border: none;
+        outline: none;
+        text-align: center;
+        padding: 10px 0 0 0;
+        position: absolute
+     }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="fun(1)">新闻</button>
+        <button v-on:click="fun(2)">娱乐</button>
+        <button v-on:click="fun(3)">军事</button>
+        <div v-if="num==1">新闻</div>
+        <div v-if="num==2">娱乐</div>
+        <div v-if="num==3">军事</div>
+
+    </div>
+<script>
+   var app=new Vue({
+       el:"#app",
+       data:{
+           num:1
+       },
+       methods:{
+        fun(item){
+                    this.num=item
+                }
+
+       }
+   })
+
+
+</script>
+</body>
+</html>

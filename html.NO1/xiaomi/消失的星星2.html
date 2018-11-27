@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        background: #08090b
+    }
+    button{
+          position: relative;
+          top:550px;
+          left:1100px;
+    }
+    </style>
+</head>
+<body>
+    <button onclick="creatStart()">开始</button>
+    <button onclick="clearStart()">结束</button>
+    <button onclick="fast()">加快</button>
+    <button onclick="slow()">减慢</button>
+    <script>
+    var timer;
+    var time=1000;
+    function creatStart(){
+            timer=setInterval(function(){
+            var oImg=document.createElement('img')
+            oImg.src='../../star.png'; 
+            oImg.style.width=Math.random()*50+'px';
+            oImg.style.position='absolute';
+            oImg.style.top=Math.random()*100+'px';
+            oImg.style.left=Math.random()*1200+'px';
+            document.body.appendChild(oImg);
+        
+            var imgs=document.getElementsByTagName('img')
+            for(var i=0;i<imgs.length;i++){
+                imgs[i].onclick=function(){
+                    this.style.display='none'
+                }
+            }
+        },1000) 
+        } 
+        function clearStart(){
+          clearInterval(timer)
+        }
+        function fast(){
+            clearInterval(timer)
+            time=time-500;
+            creatStart()
+        }
+        function slow(){
+            clearInterval(timer)
+            time=time+1000;
+            creatStart()
+        }
+        </script>
+</body>
+</html>
